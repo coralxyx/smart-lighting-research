@@ -8,14 +8,10 @@
 flowchart LR
     M01[01 数据采集] --> M02[02 LLM 抽取与原词校验]
     D01[抽取提示词与美学指标] --> M02
-    M02 --> M03[03 三元组展平]
-    M03 --> M04[04 自动聚类]
-    M04 --> M05[05 专家校正与标准化]
-    M02 --> M06[06 分类与情感标注]
-    M05 --> M06
-    M06 --> M07[07 Kano 与词对聚合]
-    M07 --> M08[08 设计方案转译]
-    M08 --> M09[09 汇报与场景素材]
+    M02 --> M03[03 最终分类与情感标注]
+    M03 --> M04[04 Kano 与词对聚合]
+    M04 --> M05[05 设计方案转译]
+    M05 --> M06[06 汇报与场景素材]
 ```
 
 ## 模块总表
@@ -23,20 +19,17 @@ flowchart LR
 | 模块 | 处理目标 | 主要输入 | 主要输出 | 输出粒度 |
 | --- | --- | --- | --- | --- |
 | 01 数据采集 | 汇集智能灯用户内容 | 公开平台帖子与链接 | `data/raw/smzdm-smart-light-posts.xlsx` | 一行一篇帖子，共 525 条数据行 |
-| 02 LLM 抽取与校验 | 从分句中抽取场景、美学指标和感受，并检查是否保留原词 | 原始帖子、抽取提示词、美学指标体系 | `data/interim/extraction-with-validation.xlsx`；`valid-original-text-results.jsonl` | 一行一条分句抽取；JSONL 一行一篇有效原文 |
-| 03 三元组展平 | 将嵌套 JSONL 拆成表格 | `valid-original-text-results.jsonl` | `valid-original-text-results-structured.xlsx` | 一行一个三元组，共 2,696 行 |
-| 04 自动聚类 | 对三个语义维度生成候选簇 | 结构化三元组 | `valid-original-text-results-clustered.xlsx`（运行后生成） | 一行一个三元组，并增加 3 个聚类编号 |
-| 05 专家校正 | 将候选簇转为业务可读标准标签 | 自动聚类结果、专家规则和美学指标体系 | `data/processed/expert-clustered.xlsx` | 一行一个三元组，共 2,696 行 |
-| 06 分类与情感标注 | 给抽取记录补充标准场景、指标、感受和情感 | 抽取记录、专家标准标签 | `tagged-results.xlsx`；`tagged-results-with-sentiment.xlsx` | 一行一条有效标注，共 4,747 行 |
-| 07 Kano 与词对聚合 | 按场景和词对计算频次、占比、情感率和 Kano 类型 | 完整标注表 | `analysis/kano-pair-statistics.xlsx` | 场景×指标、场景×指标×感受等聚合层级 |
-| 08 设计方案转译 | 将高关注触点与 Kano 类型翻译为照明方案 | Kano 汇总、项目方案 | 场景效果图与灯光参数标注图 | 一张图对应一个场景或一个场景规格 |
-| 09 汇报输出 | 串联洞察、方案和落地场景 | Kano 分析、设计素材 | `deliverables/natural-progressive-soft-light-system.pptx` | 6 页项目汇报 |
+| 02 LLM 抽取与校验 | 从分句中抽取场景、美学指标和感受，并检查是否保留原词 | 原始帖子、抽取提示词、美学指标体系 | `data/interim/extraction-with-validation.xlsx` | 一行一条分句抽取，共 4,794 条数据行 |
+| 03 最终分类与情感标注 | 为有效抽取记录补充正式分类和情感 | 通过校验的抽取记录、分类规则 | `data/processed/tagged-results-with-sentiment.xlsx` | 一行一条最终标注，共 4,747 条数据行 |
+| 04 Kano 与词对聚合 | 按场景和词对计算频次、占比、情感率和 Kano 类型 | 最终标注表 | `analysis/kano-pair-statistics.xlsx` | 场景×指标、场景×指标×感受等聚合层级 |
+| 05 设计方案转译 | 将高关注触点与 Kano 类型转化为照明方案 | Kano 汇总、项目方案 | `deliverables/assets/manifest.json` 及场景素材 | 一张图对应一个场景或一个场景规格 |
+| 06 汇报输出 | 串联洞察、方案和落地场景 | Kano 分析、设计素材 | `deliverables/natural-progressive-soft-light-system.pptx` | 6 页项目汇报 |
 
-> 行数说明：Excel 的总行数包含表头，表中数据行数已扣除表头。不同模块的记录粒度不同，不能把 525、2,696、4,794 和 4,747 直接画成无损漏斗。
+> 行数说明：Excel 的总行数包含表头，表中数据行数已扣除表头。不同模块的记录粒度不同，不能把 525、4,794 和 4,747 直接解释为无损转化率。
 
 ## 01 数据采集
 
-输入是公开平台上的帖子或评论。当前标准输出字段为：
+输入是公开平台上的帖子或评论。标准输出字段为：
 
 | 字段 | 含义 | 可视化用途 |
 | --- | --- | --- |
@@ -68,45 +61,11 @@ flowchart LR
 | `篡改/编造的词汇` | 校验失败原因 |
 | `提取结果_完整JSON` | 完整结构化结果，适合详情展开 |
 
-JSONL 输出以原文为粒度，`merged_triples` 是数组。每个元素包含 `usage_scenario`、`aesthetic_indicator` 和 `user_perceptions`。
+`valid-original-text-results.jsonl` 保留以原文为粒度的嵌套抽取结果，可用于质量抽查。`merged_triples` 中的元素包含 `usage_scenario`、`aesthetic_indicator` 和 `user_perceptions`。运行 `src/format_extraction_results.py` 可以生成便于查看的四列表格，但该表不参与最终统计。
 
-## 03 三元组展平
+## 03 最终分类与情感标注
 
-`src/format_extraction_results.py` 将 JSONL 中的数组展开为四列：
-
-```text
-original_full_text
-usage_scenario
-aesthetic_indicator
-user_perceptions
-```
-
-`user_perceptions` 在表格中可能以换行符连接多个感受。做 Sankey、词对统计或词云前，应先拆成“一行一个感受”，同时保留原三元组编号。
-
-## 04 自动聚类
-
-`src/cluster_structured_text.py` 分别对 `usage_scenario`、`aesthetic_indicator`、`user_perceptions` 做字符级 TF-IDF、SVD 降维和 HDBSCAN 聚类。
-
-输出主表增加：
-
-- `usage_scenario_cluster`
-- `aesthetic_indicator_cluster`
-- `user_perceptions_cluster`
-
-同时生成 `cluster_summary` 和 `meta` 工作表。自动聚类编号只表示同一轮运行内的候选簇，不应直接作为面向用户的标签或颜色编码；重新运行后编号可能变化。
-
-## 05 专家校正与标准化
-
-`expert-clustered.xlsx` 的 `Data Clusters (Corrected)` 工作表保留原始三元组，并把三个聚类列替换为业务语义标签。其余工作表记录重分类说明、使用场景汇总和用户感受汇总。
-
-可视化时应同时保留两层值：
-
-- 原始层：`usage_scenario`、`aesthetic_indicator`、`user_perceptions`，用于证据和例句。
-- 标准层：三个 `*_cluster` 字段，用于分组、筛选、图例和跨图联动。
-
-## 06 分类与情感标注
-
-完整输出字段为：
+正式数据源是 `data/processed/tagged-results-with-sentiment.xlsx`，字段为：
 
 ```text
 原句 (未分句)
@@ -120,11 +79,21 @@ user_perceptions
 情感强度
 ```
 
-仪表盘应优先使用 `tagged-results-with-sentiment.xlsx`。`tagged-results.xlsx` 可作为标注过程版本，不建议与完整版本混合统计。
+可视化时应保留两层信息：
 
-## 07 Kano 与词对聚合
+- 原始层：`使用场景`、`标准美学指标`、`用户感受`，用于例句、证据和钻取详情。
+- 分类层：`使用场景分类`、`标准美学指标分类`、`用户感受分类`、`情感强度`，用于分组、筛选、图例和聚合。
 
-`kano-pair-statistics.xlsx` 是可视化的首选数据源：
+正式分类包括：
+
+- 使用场景：日常基础照明、睡眠与起居、学习工作、智能托管、休闲娱乐、亲子互动陪伴、无。
+- 美学指标：照明与色调、交互功能、风格设计、形体造型、视觉舒适、做工细节、材料质感、空间氛围、色彩。
+- 用户感受：美观与价值感、舒适感、便捷性、愉悦与氛围感、安全感、专注、无。
+- 情感强度：正向、中性、负向。
+
+## 04 Kano 与词对聚合
+
+`kano-pair-statistics.xlsx` 是可视化的首选聚合数据源：
 
 - `Kano汇总`：场景×指标层级，含频次、场景内占比、情感计数/比例、主要感受、Kano 分类和设计优先级。
 - `词对明细`：场景×指标×用户感受层级，适合 Sankey、网络图和词对排行。
@@ -134,7 +103,7 @@ user_perceptions
 
 当前 Kano 定义：A 为魅力型，O 为期望型，M 为基础型/风险项，I 为无差异型；单场景内指标提及少于 5 条标记为样本不足。场景分类“无”参与全局统计和词对明细，但不生成正式场景页。
 
-## 08–09 设计转译与交付
+## 05–06 设计转译与交付
 
 设计素材按场景和用途成对组织：
 
@@ -155,19 +124,19 @@ user_perceptions
 | 场景分布 | `全局统计` | 使用场景分类 | 提及频次、全局占比 | 排序条形图 |
 | 场景触点矩阵 | `Kano汇总` | 场景、指标 | 提及频次或场景内占比 | 热力图 |
 | 感知关系流 | `词对明细` | 场景→指标→感受 | 提及频次 | Sankey 图 |
-| 情感结构 | `Kano汇总` 或标注明细 | 场景、指标 | 正向/中性/负向数 | 100% 堆叠条形图 |
+| 情感结构 | `Kano汇总` 或最终标注明细 | 场景、指标 | 正向/中性/负向数 | 100% 堆叠条形图 |
 | Kano 优先级 | `Kano汇总` | 指标、Kano 分类 | 正向率、负向率、频次 | 气泡散点图；分类来自现有字段，不要重新推断 |
-| 原词证据 | 完整标注表 | 标准标签、原始文本 | 记录数 | 可筛选明细表 |
+| 原词证据 | 最终标注表 | 正式分类、原始文本 | 记录数 | 可筛选明细表 |
 | 洞察到方案 | Kano 汇总、素材清单 | 场景、指标、素材角色 | 频次、优先级 | 主从详情视图或故事线 |
 
 ## 连接与建模规则
 
-1. 当前数据没有贯穿全流程的稳定主键。新建可视化数据层时，应增加 `post_id`、`segment_id`、`triple_id` 和 `tag_id`，并在每一步保留上游 ID。
+1. 当前数据没有贯穿全流程的稳定主键。新建可视化数据层时，应增加 `post_id`、`segment_id` 和 `tag_id`，并在每一步保留上游 ID。
 2. 现有文件跨表追溯主要依赖原文文本。文本连接前要统一换行、空白和全半角字符，并检查重复值；不要默认原文唯一。
-3. 原始词和标准分类必须分列保存。图表分组使用标准分类，证据详情显示原始词。
+3. 原始词和正式分类必须分列保存。图表分组使用正式分类，证据详情显示原始词。
 4. `无` 是业务分类值，空单元格才表示缺失。导入时不要把二者合并。
 5. 百分比使用数值类型存储，前端负责格式化。不要把 `0.24` 提前转换成字符串 `24%`。
-6. 图表默认从聚合表读取；只有例句、质量检查和钻取详情读取明细表。
+6. 图表默认从聚合表读取；只有例句、质量检查和钻取详情读取最终标注明细。
 7. 对外展示前应隐藏作者字段，并确认第三方用户内容和图片的使用权限。
 
 ## 建议的可视化数据模型

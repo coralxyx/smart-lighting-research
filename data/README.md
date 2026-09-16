@@ -13,8 +13,6 @@
 
 ## `processed/`
 
-- `expert-clustered.xlsx`：2,696 条专家校正后的场景、美学指标和用户感受聚类结果，并附分类汇总。
-- `tagged-results.xlsx`：4,747 条已完成场景、美学指标和用户感受标签的记录。
-- `tagged-results-with-sentiment.xlsx`：在标签结果上补充正向、中性、负向情感强度。
+- `tagged-results-with-sentiment.xlsx`：4,747 条最终标注记录，包含场景分类、美学指标分类、用户感受分类，以及正向、中性、负向情感强度。
 
 行数均不含表头。数据源含第三方用户生成内容，使用与发布前请检查来源平台条款和隐私要求。
