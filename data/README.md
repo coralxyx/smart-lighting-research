@@ -2,7 +2,7 @@
 
 ## `raw/`
 
-- `smzdm-smart-light-posts.xlsx`：526 条智能灯相关帖子，包含标题、作者、发布时间、正文与来源链接。
+- `smzdm-smart-light-posts.xlsx`：525 条智能灯相关帖子，包含标题、作者、发布时间、正文与来源链接。
 
 ## `interim/`
 

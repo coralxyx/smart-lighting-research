@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "assets": [
+    {
+      "path": "deliverables/assets/living-room-render.png",
+      "scene_key": "daily_basic_lighting",
+      "scene_label": "日常基础照明",
+      "space": "客厅",
+      "role": "render",
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "path": "deliverables/assets/living-room-lighting-spec.png",
+      "scene_key": "daily_basic_lighting",
+      "scene_label": "日常基础照明",
+      "space": "客厅",
+      "role": "annotated_spec",
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "path": "deliverables/assets/living-room-entertainment-render.png",
+      "scene_key": "leisure_entertainment",
+      "scene_label": "休闲娱乐",
+      "space": "客厅观影区",
+      "role": "render",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "deliverables/assets/living-room-entertainment-lighting-spec.png",
+      "scene_key": "leisure_entertainment",
+      "scene_label": "休闲娱乐",
+      "space": "客厅观影区",
+      "role": "annotated_spec",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "deliverables/assets/bedroom-render.png",
+      "scene_key": "sleep_and_living",
+      "scene_label": "睡眠与起居",
+      "space": "卧室",
+      "role": "render",
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "path": "deliverables/assets/bedroom-lighting-spec.jpg",
+      "scene_key": "sleep_and_living",
+      "scene_label": "睡眠与起居",
+      "space": "卧室",
+      "role": "annotated_spec",
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "path": "deliverables/assets/family-bedroom-render.png",
+      "scene_key": "parent_child_companionship",
+      "scene_label": "亲子互动陪伴",
+      "space": "亲子卧室",
+      "role": "render",
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "path": "deliverables/assets/family-bedroom-lighting-spec.png",
+      "scene_key": "parent_child_companionship",
+      "scene_label": "亲子互动陪伴",
+      "space": "亲子卧室",
+      "role": "annotated_spec",
+      "width": 1448,
+      "height": 1086
+    }
+  ]
+}

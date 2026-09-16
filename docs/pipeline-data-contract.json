@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0.0",
+  "project": "smart-home-lighting-fp-mapping",
+  "generated_from_repository_state": "2026-09-16",
+  "conventions": {
+    "missing_value": "空值表示缺失；字符串‘无’是有效业务分类",
+    "percentage_storage": "0-1 numeric",
+    "recommended_primary_keys": ["post_id", "segment_id", "triple_id", "tag_id"],
+    "current_join_warning": "当前文件未贯穿稳定主键，跨阶段只能基于规范化原文和行序辅助连接，必须检查重复值"
+  },
+  "modules": [
+    {
+      "id": "M01",
+      "name": "数据采集",
+      "input": ["公开平台帖子或评论"],
+      "output": ["data/raw/smzdm-smart-light-posts.xlsx"],
+      "grain": "one row per post",
+      "records": 525
+    },
+    {
+      "id": "M02",
+      "name": "LLM抽取与原词校验",
+      "input": [
+        "data/raw/smzdm-smart-light-posts.xlsx",
+        "docs/smart-lighting-extraction-prompt.docx",
+        "docs/aesthetic-indicators.docx"
+      ],
+      "output": [
+        "data/interim/extraction-with-validation.xlsx",
+        "data/interim/valid-original-text-results.jsonl"
+      ],
+      "grain": "segment extraction and source document with nested triples",
+      "records": {
+        "validated_segments": 4794,
+        "jsonl_documents": 366,
+        "jsonl_triples": 2696
+      }
+    },
+    {
+      "id": "M03",
+      "name": "三元组展平",
+      "input": ["data/interim/valid-original-text-results.jsonl"],
+      "process": "src/format_extraction_results.py",
+      "output": ["data/interim/valid-original-text-results-structured.xlsx"],
+      "grain": "one row per triple",
+      "records": 2696
+    },
+    {
+      "id": "M04",
+      "name": "自动聚类",
+      "input": ["data/interim/valid-original-text-results-structured.xlsx"],
+      "process": "src/cluster_structured_text.py",
+      "output": ["data/processed/valid-original-text-results-clustered.xlsx"],
+      "grain": "one row per triple with three candidate cluster ids",
+      "output_is_generated_and_gitignored": true
+    },
+    {
+      "id": "M05",
+      "name": "专家校正与标准化",
+      "input": [
+        "data/processed/valid-original-text-results-clustered.xlsx",
+        "docs/aesthetic-indicators.docx"
+      ],
+      "output": ["data/processed/expert-clustered.xlsx"],
+      "grain": "one row per triple with semantic labels",
+      "records": 2696
+    },
+    {
+      "id": "M06",
+      "name": "分类与情感标注",
+      "input": [
+        "data/interim/extraction-with-validation.xlsx",
+        "data/processed/expert-clustered.xlsx"
+      ],
+      "output": [
+        "data/processed/tagged-results.xlsx",
+        "data/processed/tagged-results-with-sentiment.xlsx"
+      ],
+      "grain": "one row per valid tagged extraction",
+      "records": 4747,
+      "canonical_output": "data/processed/tagged-results-with-sentiment.xlsx"
+    },
+    {
+      "id": "M07",
+      "name": "Kano与词对聚合",
+      "input": ["data/processed/tagged-results-with-sentiment.xlsx"],
+      "output": ["analysis/kano-pair-statistics.xlsx"],
+      "grain": [
+        "scenario x indicator",
+        "scenario x indicator x perception",
+        "global category distribution"
+      ]
+    },
+    {
+      "id": "M08",
+      "name": "设计方案转译",
+      "input": [
+        "analysis/kano-pair-statistics.xlsx",
+        "docs/smart-home-fp-mapping-project-plan.docx"
+      ],
+      "output": ["deliverables/assets/manifest.json"],
+      "grain": "one asset per scene and role"
+    },
+    {
+      "id": "M09",
+      "name": "汇报输出",
+      "input": [
+        "analysis/kano-pair-statistics.xlsx",
+        "deliverables/assets/manifest.json"
+      ],
+      "output": ["deliverables/natural-progressive-soft-light-system.pptx"],
+      "grain": "one presentation"
+    }
+  ],
+  "datasets": [
+    {
+      "path": "data/raw/smzdm-smart-light-posts.xlsx",
+      "sheet": "智能灯评论",
+      "grain": "post",
+      "records": 525,
+      "fields": ["序号", "标题", "作者", "发布时间", "正文内容", "链接"]
+    },
+    {
+      "path": "data/interim/extraction-with-validation.xlsx",
+      "sheet": "Sheet1",
+      "grain": "segment extraction",
+      "records": 4794,
+      "fields": [
+        "原句 (未分句)",
+        "分句 (模型输入)",
+        "使用场景",
+        "标准美学指标",
+        "用户感受",
+        "是否为原词提取",
+        "篡改/编造的词汇",
+        "提取结果_完整JSON"
+      ]
+    },
+    {
+      "path": "data/interim/valid-original-text-results.jsonl",
+      "grain": "source document",
+      "records": 366,
+      "fields": {
+        "root": ["original_full_text", "merged_triples"],
+        "merged_triples_item": ["usage_scenario", "aesthetic_indicator", "user_perceptions"]
+      }
+    },
+    {
+      "path": "data/interim/valid-original-text-results-structured.xlsx",
+      "sheet": "Sheet1",
+      "grain": "triple",
+      "records": 2696,
+      "fields": ["original_full_text", "usage_scenario", "aesthetic_indicator", "user_perceptions"]
+    },
+    {
+      "path": "data/processed/expert-clustered.xlsx",
+      "sheet": "Data Clusters (Corrected)",
+      "grain": "triple with semantic labels",
+      "records": 2696,
+      "fields": [
+        "original_full_text",
+        "usage_scenario",
+        "aesthetic_indicator",
+        "user_perceptions",
+        "usage_scenario_cluster",
+        "aesthetic_indicator_cluster",
+        "user_perceptions_cluster"
+      ]
+    },
+    {
+      "path": "data/processed/tagged-results-with-sentiment.xlsx",
+      "sheet": "Sheet1",
+      "grain": "tagged extraction",
+      "records": 4747,
+      "fields": [
+        "原句 (未分句)",
+        "分句 (模型输入)",
+        "使用场景",
+        "标准美学指标",
+        "用户感受",
+        "使用场景分类",
+        "标准美学指标分类",
+        "用户感受分类",
+        "情感强度"
+      ]
+    },
+    {
+      "path": "analysis/kano-pair-statistics.xlsx",
+      "canonical_sheets": {
+        "Kano汇总": {
+          "grain": "scenario x indicator",
+          "fields": [
+            "使用场景",
+            "触点类型",
+            "标准美学指标",
+            "提及频次",
+            "场景内占比",
+            "正向数",
+            "中性数",
+            "负向数",
+            "正向率",
+            "中性率",
+            "负向率",
+            "主要用户感受",
+            "用户感受占比分布",
+            "Kano分类",
+            "设计优先级"
+          ]
+        },
+        "词对明细": {
+          "grain": "scenario x indicator x perception",
+          "fields": [
+            "使用场景",
+            "触点类型",
+            "美学指标",
+            "用户感受",
+            "提及频次",
+            "全局占比",
+            "场景内占比",
+            "正向数",
+            "中性数",
+            "负向数",
+            "正向率",
+            "负向率",
+            "主导情感"
+          ]
+        },
+        "全局统计": {
+          "grain": "global distributions and top pairs",
+          "metrics": {
+            "有效标注总数": 4747,
+            "正式使用场景数": 6,
+            "美学指标分类数": 9,
+            "用户感受分类数": 7
+          }
+        }
+      }
+    }
+  ],
+  "recommended_visualizations": [
+    {
+      "name": "场景分布",
+      "source": "analysis/kano-pair-statistics.xlsx#全局统计",
+      "dimensions": ["使用场景分类"],
+      "measures": ["提及频次", "全局占比"],
+      "chart": "sorted_bar"
+    },
+    {
+      "name": "场景触点矩阵",
+      "source": "analysis/kano-pair-statistics.xlsx#Kano汇总",
+      "dimensions": ["使用场景", "标准美学指标"],
+      "measures": ["提及频次", "场景内占比"],
+      "chart": "heatmap"
+    },
+    {
+      "name": "感知关系流",
+      "source": "analysis/kano-pair-statistics.xlsx#词对明细",
+      "dimensions": ["使用场景", "美学指标", "用户感受"],
+      "measures": ["提及频次"],
+      "chart": "sankey"
+    },
+    {
+      "name": "情感结构",
+      "source": "analysis/kano-pair-statistics.xlsx#Kano汇总",
+      "dimensions": ["使用场景", "标准美学指标"],
+      "measures": ["正向数", "中性数", "负向数"],
+      "chart": "normalized_stacked_bar"
+    },
+    {
+      "name": "Kano优先级",
+      "source": "analysis/kano-pair-statistics.xlsx#Kano汇总",
+      "dimensions": ["标准美学指标", "Kano分类"],
+      "measures": ["正向率", "负向率", "提及频次"],
+      "chart": "bubble_scatter"
+    }
+  ]
+}

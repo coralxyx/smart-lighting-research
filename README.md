@@ -4,7 +4,7 @@
 
 ## 项目产出
 
-- 数据集：526 篇智能灯相关帖子，以及抽取、校验、聚类和情感标注后的过程数据。
+- 数据集：525 篇智能灯相关帖子，以及抽取、校验、聚类和情感标注后的过程数据。
 - 分析结果：按日常基础照明、睡眠与起居、学习工作、智能托管、休闲娱乐和亲子互动陪伴等场景进行 Kano 触点分析。
 - 设计方案：以“自然渐进式柔光系统”为主题，将舒适基础光、睡前暖光和夜起路径光组织为连续体验。
 - 方法资料：项目推进方案、智能照明抽取提示词和美学指标体系。
@@ -44,6 +44,8 @@
 
 更详细的数据说明见 [`data/README.md`](data/README.md)，交付物说明见 [`deliverables/README.md`](deliverables/README.md)。
 
+需要制作流程图、Sankey、Kano 气泡图或数据仪表盘时，请从 [`docs/visualization-pipeline.md`](docs/visualization-pipeline.md) 开始；机器可读字段与模块契约见 [`docs/pipeline-data-contract.json`](docs/pipeline-data-contract.json)。
+
 ## 快速开始
 
 建议使用 Python 3.10 或更高版本。
@@ -67,6 +69,8 @@ python src/cluster_structured_text.py
 - [`docs/smart-home-fp-mapping-project-plan.docx`](docs/smart-home-fp-mapping-project-plan.docx)：从数据准备到决策支持的完整项目推进方案。
 - [`docs/smart-lighting-extraction-prompt.docx`](docs/smart-lighting-extraction-prompt.docx)：用于抽取三元组的提示词与示例。
 - [`docs/aesthetic-indicators.docx`](docs/aesthetic-indicators.docx)：形体、动效交互、色彩、材料与表面处理等美学指标体系。
+- [`docs/visualization-pipeline.md`](docs/visualization-pipeline.md)：模块输入输出、字段粒度、连接规则和推荐图表。
+- [`docs/pipeline-data-contract.json`](docs/pipeline-data-contract.json)：供前端、BI 或 ETL 直接读取的数据契约。
 
 ## 数据与合规说明
 
