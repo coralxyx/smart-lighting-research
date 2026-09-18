@@ -1,0 +1,36 @@
+{
+  "method_name": "OpenCLIP zero-shot lighting aesthetics baseline",
+  "method_version": "1.0.0",
+  "model_name": "ViT-B-32",
+  "pretrained": "laion2b_s34b_b79k",
+  "device": "cpu",
+  "batch_size": 4,
+  "attributes": {
+    "色温感知": {
+      "暖色照明": ["an interior room with warm amber lighting", "a cozy interior illuminated by warm light"],
+      "中性色照明": ["an interior room with neutral white lighting", "a room with balanced neutral lighting"],
+      "冷色照明": ["an interior room with cool blue lighting", "a modern interior illuminated by cool light"]
+    },
+    "光线柔和度": {
+      "柔和漫射": ["an interior with soft diffused lighting", "a room with gentle soft shadows"],
+      "硬朗定向": ["an interior with hard directional lighting", "a room with strong sharp shadows"]
+    },
+    "照明方式": {
+      "间接照明": ["an interior with indirect ambient lighting", "a room lit by concealed reflected light"],
+      "直接照明": ["an interior with direct visible light sources", "a room lit by direct lamps and spotlights"]
+    },
+    "光照层次": {
+      "层次丰富": ["an interior with layered lighting and multiple light sources", "a room with rich lighting depth"],
+      "均匀平坦": ["an interior with flat uniform lighting", "a room with even lighting and little contrast"]
+    },
+    "明暗氛围": {
+      "明亮通透": ["a bright airy interior", "a well illuminated open room"],
+      "昏暗氛围": ["a dim moody interior", "a dark atmospheric room"]
+    }
+  },
+  "limitations": [
+    "零样本概率只表示候选提示词之间的相对相似度，不是客观属性概率。",
+    "结果受英文提示词、预训练语料和图片构图影响。",
+    "在没有人工标签前只能作为 baseline，不能报告分类准确率。"
+  ]
+}

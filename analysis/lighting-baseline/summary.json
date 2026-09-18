@@ -1,0 +1,114 @@
+{
+  "method_name": "Interpretable image-based lighting analysis baseline",
+  "method_version": "1.0.0",
+  "image_count": 24,
+  "global_mean": {
+    "mean_luminance": 0.536807,
+    "luminance_std": 0.210071,
+    "dynamic_range_p95_p05": 0.688072,
+    "dark_area_ratio": 0.116445,
+    "bright_area_ratio": 0.136601,
+    "highlight_area_ratio": 0.05858,
+    "local_contrast_mean": 0.05419,
+    "spatial_layering_std": 0.127906,
+    "luminance_entropy": 0.931544,
+    "warm_pixel_ratio": 0.239256,
+    "warmth_index": 0.037872,
+    "bright_region_count": 3.666667,
+    "bright_region_concentration": 0.467669
+  },
+  "room_mean": {
+    "bedroom": {
+      "mean_luminance": 0.613048,
+      "luminance_std": 0.216968,
+      "dynamic_range_p95_p05": 0.717647,
+      "dark_area_ratio": 0.071679,
+      "bright_area_ratio": 0.208308,
+      "highlight_area_ratio": 0.10607,
+      "local_contrast_mean": 0.046673,
+      "spatial_layering_std": 0.142962,
+      "luminance_entropy": 0.933688,
+      "warm_pixel_ratio": 0.313744,
+      "warmth_index": 0.047537,
+      "bright_region_count": 4.166667,
+      "bright_region_concentration": 0.604629
+    },
+    "hallway": {
+      "mean_luminance": 0.417375,
+      "luminance_std": 0.193329,
+      "dynamic_range_p95_p05": 0.629412,
+      "dark_area_ratio": 0.18038,
+      "bright_area_ratio": 0.054618,
+      "highlight_area_ratio": 0.018775,
+      "local_contrast_mean": 0.039309,
+      "spatial_layering_std": 0.112131,
+      "luminance_entropy": 0.915386,
+      "warm_pixel_ratio": 0.224154,
+      "warmth_index": 0.035905,
+      "bright_region_count": 1.5,
+      "bright_region_concentration": 0.248705
+    },
+    "living_room": {
+      "mean_luminance": 0.590349,
+      "luminance_std": 0.214927,
+      "dynamic_range_p95_p05": 0.69281,
+      "dark_area_ratio": 0.082918,
+      "bright_area_ratio": 0.188345,
+      "highlight_area_ratio": 0.062506,
+      "local_contrast_mean": 0.063227,
+      "spatial_layering_std": 0.121528,
+      "luminance_entropy": 0.937553,
+      "warm_pixel_ratio": 0.281697,
+      "warmth_index": 0.043523,
+      "bright_region_count": 5.833333,
+      "bright_region_concentration": 0.567446
+    },
+    "study": {
+      "mean_luminance": 0.526454,
+      "luminance_std": 0.215058,
+      "dynamic_range_p95_p05": 0.712418,
+      "dark_area_ratio": 0.130804,
+      "bright_area_ratio": 0.095132,
+      "highlight_area_ratio": 0.046969,
+      "local_contrast_mean": 0.067553,
+      "spatial_layering_std": 0.135002,
+      "luminance_entropy": 0.939551,
+      "warm_pixel_ratio": 0.137431,
+      "warmth_index": 0.024523,
+      "bright_region_count": 3.166667,
+      "bright_region_concentration": 0.449894
+    }
+  },
+  "extremes": {
+    "brightest": {
+      "image_id": "bedroom/bedroom_05_pexels_7546559.jpg",
+      "mean_luminance": 0.698717
+    },
+    "darkest": {
+      "image_id": "hallway/hallway_05_pexels_15210509.jpg",
+      "mean_luminance": 0.26411
+    },
+    "most_spatially_layered": {
+      "image_id": "bedroom/bedroom_06_pexels_3933240.jpg",
+      "spatial_layering_std": 0.229508
+    },
+    "warmest_proxy": {
+      "image_id": "living_room/living_02_pexels_10161225.jpg",
+      "warmth_index": 0.149745
+    }
+  },
+  "parameters": {
+    "dark_threshold": 0.2,
+    "bright_threshold": 0.8,
+    "highlight_threshold": 0.88,
+    "warm_lab_b_threshold": 138,
+    "grid_rows": 4,
+    "grid_columns": 4,
+    "minimum_bright_component_area_ratio": 0.002
+  },
+  "limitations": [
+    "指标基于单张 sRGB 图片，不等同于照度、色温或显色指数实测。",
+    "相机曝光、白平衡、窗外日光和后期处理都会影响结果。",
+    "该 baseline 用于相对比较和生成前后变化分析，不用于工程照明验收。"
+  ]
+}

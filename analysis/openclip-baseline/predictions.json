@@ -1,0 +1,1154 @@
+[
+  {
+    "image_id": "bedroom/bedroom_01_pexels_6510419.jpg",
+    "room": "bedroom",
+    "source_path": "data/raw/base_images/bedroom/bedroom_01_pexels_6510419.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.61294,
+        "scores": {
+          "暖色照明": 0.61294,
+          "中性色照明": 0.371843,
+          "冷色照明": 0.015217
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.815839,
+        "scores": {
+          "柔和漫射": 0.815839,
+          "硬朗定向": 0.184161
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.543943,
+        "scores": {
+          "间接照明": 0.456057,
+          "直接照明": 0.543943
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.605003,
+        "scores": {
+          "层次丰富": 0.394997,
+          "均匀平坦": 0.605003
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.929108,
+        "scores": {
+          "明亮通透": 0.929108,
+          "昏暗氛围": 0.070892
+        }
+      }
+    }
+  },
+  {
+    "image_id": "bedroom/bedroom_02_pexels_7031710.jpg",
+    "room": "bedroom",
+    "source_path": "data/raw/base_images/bedroom/bedroom_02_pexels_7031710.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.809042,
+        "scores": {
+          "暖色照明": 0.129543,
+          "中性色照明": 0.809042,
+          "冷色照明": 0.061415
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.938517,
+        "scores": {
+          "柔和漫射": 0.938517,
+          "硬朗定向": 0.061483
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.673653,
+        "scores": {
+          "间接照明": 0.673653,
+          "直接照明": 0.326347
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.511932,
+        "scores": {
+          "层次丰富": 0.488068,
+          "均匀平坦": 0.511932
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.967205,
+        "scores": {
+          "明亮通透": 0.967205,
+          "昏暗氛围": 0.032795
+        }
+      }
+    }
+  },
+  {
+    "image_id": "bedroom/bedroom_03_pexels_6121088.jpg",
+    "room": "bedroom",
+    "source_path": "data/raw/base_images/bedroom/bedroom_03_pexels_6121088.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.839175,
+        "scores": {
+          "暖色照明": 0.147448,
+          "中性色照明": 0.839175,
+          "冷色照明": 0.013378
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.912272,
+        "scores": {
+          "柔和漫射": 0.912272,
+          "硬朗定向": 0.087728
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.500523,
+        "scores": {
+          "间接照明": 0.500523,
+          "直接照明": 0.499477
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.944759,
+        "scores": {
+          "层次丰富": 0.055241,
+          "均匀平坦": 0.944759
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.999346,
+        "scores": {
+          "明亮通透": 0.999346,
+          "昏暗氛围": 0.000654
+        }
+      }
+    }
+  },
+  {
+    "image_id": "bedroom/bedroom_04_pexels_6510417.jpg",
+    "room": "bedroom",
+    "source_path": "data/raw/base_images/bedroom/bedroom_04_pexels_6510417.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.490868,
+        "scores": {
+          "暖色照明": 0.490868,
+          "中性色照明": 0.483632,
+          "冷色照明": 0.0255
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.838677,
+        "scores": {
+          "柔和漫射": 0.838677,
+          "硬朗定向": 0.161323
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.814811,
+        "scores": {
+          "间接照明": 0.814811,
+          "直接照明": 0.185189
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.964158,
+        "scores": {
+          "层次丰富": 0.035842,
+          "均匀平坦": 0.964158
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.983895,
+        "scores": {
+          "明亮通透": 0.983895,
+          "昏暗氛围": 0.016105
+        }
+      }
+    }
+  },
+  {
+    "image_id": "bedroom/bedroom_05_pexels_7546559.jpg",
+    "room": "bedroom",
+    "source_path": "data/raw/base_images/bedroom/bedroom_05_pexels_7546559.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.545948,
+        "scores": {
+          "暖色照明": 0.058151,
+          "中性色照明": 0.545948,
+          "冷色照明": 0.3959
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.942679,
+        "scores": {
+          "柔和漫射": 0.942679,
+          "硬朗定向": 0.057321
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.620471,
+        "scores": {
+          "间接照明": 0.620471,
+          "直接照明": 0.379529
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.751985,
+        "scores": {
+          "层次丰富": 0.248015,
+          "均匀平坦": 0.751985
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.968216,
+        "scores": {
+          "明亮通透": 0.968216,
+          "昏暗氛围": 0.031784
+        }
+      }
+    }
+  },
+  {
+    "image_id": "bedroom/bedroom_06_pexels_3933240.jpg",
+    "room": "bedroom",
+    "source_path": "data/raw/base_images/bedroom/bedroom_06_pexels_3933240.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.806925,
+        "scores": {
+          "暖色照明": 0.806925,
+          "中性色照明": 0.192975,
+          "冷色照明": 0.000101
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.97576,
+        "scores": {
+          "柔和漫射": 0.97576,
+          "硬朗定向": 0.02424
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.548742,
+        "scores": {
+          "间接照明": 0.548742,
+          "直接照明": 0.451259
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.841632,
+        "scores": {
+          "层次丰富": 0.158368,
+          "均匀平坦": 0.841632
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.915712,
+        "scores": {
+          "明亮通透": 0.915712,
+          "昏暗氛围": 0.084288
+        }
+      }
+    }
+  },
+  {
+    "image_id": "hallway/hallway_01_pexels_6903159.jpg",
+    "room": "hallway",
+    "source_path": "data/raw/base_images/hallway/hallway_01_pexels_6903159.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "冷色照明",
+        "confidence": 0.943725,
+        "scores": {
+          "暖色照明": 0.003029,
+          "中性色照明": 0.053246,
+          "冷色照明": 0.943725
+        }
+      },
+      "光线柔和度": {
+        "label": "硬朗定向",
+        "confidence": 0.905348,
+        "scores": {
+          "柔和漫射": 0.094652,
+          "硬朗定向": 0.905348
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.624228,
+        "scores": {
+          "间接照明": 0.624228,
+          "直接照明": 0.375772
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.86042,
+        "scores": {
+          "层次丰富": 0.13958,
+          "均匀平坦": 0.86042
+        }
+      },
+      "明暗氛围": {
+        "label": "昏暗氛围",
+        "confidence": 0.982453,
+        "scores": {
+          "明亮通透": 0.017547,
+          "昏暗氛围": 0.982453
+        }
+      }
+    }
+  },
+  {
+    "image_id": "hallway/hallway_02_pexels_6580384.jpg",
+    "room": "hallway",
+    "source_path": "data/raw/base_images/hallway/hallway_02_pexels_6580384.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "冷色照明",
+        "confidence": 0.578159,
+        "scores": {
+          "暖色照明": 0.398212,
+          "中性色照明": 0.023629,
+          "冷色照明": 0.578159
+        }
+      },
+      "光线柔和度": {
+        "label": "硬朗定向",
+        "confidence": 0.781313,
+        "scores": {
+          "柔和漫射": 0.218687,
+          "硬朗定向": 0.781313
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.964547,
+        "scores": {
+          "间接照明": 0.964547,
+          "直接照明": 0.035453
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.820338,
+        "scores": {
+          "层次丰富": 0.179662,
+          "均匀平坦": 0.820338
+        }
+      },
+      "明暗氛围": {
+        "label": "昏暗氛围",
+        "confidence": 0.959843,
+        "scores": {
+          "明亮通透": 0.040157,
+          "昏暗氛围": 0.959843
+        }
+      }
+    }
+  },
+  {
+    "image_id": "hallway/hallway_03_pexels_6489085.jpg",
+    "room": "hallway",
+    "source_path": "data/raw/base_images/hallway/hallway_03_pexels_6489085.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "冷色照明",
+        "confidence": 0.629665,
+        "scores": {
+          "暖色照明": 0.086713,
+          "中性色照明": 0.283622,
+          "冷色照明": 0.629665
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.814664,
+        "scores": {
+          "柔和漫射": 0.814664,
+          "硬朗定向": 0.185336
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.939701,
+        "scores": {
+          "间接照明": 0.939701,
+          "直接照明": 0.060299
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.890227,
+        "scores": {
+          "层次丰富": 0.109773,
+          "均匀平坦": 0.890227
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.990373,
+        "scores": {
+          "明亮通透": 0.990373,
+          "昏暗氛围": 0.009627
+        }
+      }
+    }
+  },
+  {
+    "image_id": "hallway/hallway_04_pexels_7018386.jpg",
+    "room": "hallway",
+    "source_path": "data/raw/base_images/hallway/hallway_04_pexels_7018386.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.586384,
+        "scores": {
+          "暖色照明": 0.586384,
+          "中性色照明": 0.322671,
+          "冷色照明": 0.090945
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.871978,
+        "scores": {
+          "柔和漫射": 0.871978,
+          "硬朗定向": 0.128022
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.906276,
+        "scores": {
+          "间接照明": 0.906276,
+          "直接照明": 0.093724
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.785617,
+        "scores": {
+          "层次丰富": 0.214384,
+          "均匀平坦": 0.785617
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.999258,
+        "scores": {
+          "明亮通透": 0.999258,
+          "昏暗氛围": 0.000742
+        }
+      }
+    }
+  },
+  {
+    "image_id": "hallway/hallway_05_pexels_15210509.jpg",
+    "room": "hallway",
+    "source_path": "data/raw/base_images/hallway/hallway_05_pexels_15210509.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.800086,
+        "scores": {
+          "暖色照明": 0.800086,
+          "中性色照明": 0.120575,
+          "冷色照明": 0.079339
+        }
+      },
+      "光线柔和度": {
+        "label": "硬朗定向",
+        "confidence": 0.893854,
+        "scores": {
+          "柔和漫射": 0.106146,
+          "硬朗定向": 0.893854
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.917131,
+        "scores": {
+          "间接照明": 0.917131,
+          "直接照明": 0.082869
+        }
+      },
+      "光照层次": {
+        "label": "层次丰富",
+        "confidence": 0.527828,
+        "scores": {
+          "层次丰富": 0.527828,
+          "均匀平坦": 0.472172
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.976551,
+        "scores": {
+          "明亮通透": 0.976551,
+          "昏暗氛围": 0.023449
+        }
+      }
+    }
+  },
+  {
+    "image_id": "hallway/hallway_06_pexels_12709863.jpg",
+    "room": "hallway",
+    "source_path": "data/raw/base_images/hallway/hallway_06_pexels_12709863.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "冷色照明",
+        "confidence": 0.959231,
+        "scores": {
+          "暖色照明": 0.012279,
+          "中性色照明": 0.02849,
+          "冷色照明": 0.959231
+        }
+      },
+      "光线柔和度": {
+        "label": "硬朗定向",
+        "confidence": 0.960584,
+        "scores": {
+          "柔和漫射": 0.039416,
+          "硬朗定向": 0.960584
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.816941,
+        "scores": {
+          "间接照明": 0.183059,
+          "直接照明": 0.816941
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.968662,
+        "scores": {
+          "层次丰富": 0.031338,
+          "均匀平坦": 0.968662
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.932627,
+        "scores": {
+          "明亮通透": 0.932627,
+          "昏暗氛围": 0.067373
+        }
+      }
+    }
+  },
+  {
+    "image_id": "living_room/living_01_pexels_7534559.jpg",
+    "room": "living_room",
+    "source_path": "data/raw/base_images/living_room/living_01_pexels_7534559.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.876469,
+        "scores": {
+          "暖色照明": 0.121494,
+          "中性色照明": 0.876469,
+          "冷色照明": 0.002038
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.789568,
+        "scores": {
+          "柔和漫射": 0.789568,
+          "硬朗定向": 0.210432
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.773032,
+        "scores": {
+          "间接照明": 0.226968,
+          "直接照明": 0.773032
+        }
+      },
+      "光照层次": {
+        "label": "层次丰富",
+        "confidence": 0.692,
+        "scores": {
+          "层次丰富": 0.692,
+          "均匀平坦": 0.308
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.999893,
+        "scores": {
+          "明亮通透": 0.999893,
+          "昏暗氛围": 0.000107
+        }
+      }
+    }
+  },
+  {
+    "image_id": "living_room/living_02_pexels_10161225.jpg",
+    "room": "living_room",
+    "source_path": "data/raw/base_images/living_room/living_02_pexels_10161225.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.565557,
+        "scores": {
+          "暖色照明": 0.565557,
+          "中性色照明": 0.354073,
+          "冷色照明": 0.080371
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.666744,
+        "scores": {
+          "柔和漫射": 0.666744,
+          "硬朗定向": 0.333256
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.888266,
+        "scores": {
+          "间接照明": 0.888266,
+          "直接照明": 0.111734
+        }
+      },
+      "光照层次": {
+        "label": "层次丰富",
+        "confidence": 0.522963,
+        "scores": {
+          "层次丰富": 0.522963,
+          "均匀平坦": 0.477037
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.999756,
+        "scores": {
+          "明亮通透": 0.999756,
+          "昏暗氛围": 0.000244
+        }
+      }
+    }
+  },
+  {
+    "image_id": "living_room/living_03_pexels_6186821.jpg",
+    "room": "living_room",
+    "source_path": "data/raw/base_images/living_room/living_03_pexels_6186821.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.60663,
+        "scores": {
+          "暖色照明": 0.308259,
+          "中性色照明": 0.60663,
+          "冷色照明": 0.085111
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.832704,
+        "scores": {
+          "柔和漫射": 0.832704,
+          "硬朗定向": 0.167296
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.568894,
+        "scores": {
+          "间接照明": 0.431106,
+          "直接照明": 0.568894
+        }
+      },
+      "光照层次": {
+        "label": "层次丰富",
+        "confidence": 0.643899,
+        "scores": {
+          "层次丰富": 0.643899,
+          "均匀平坦": 0.356101
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.971503,
+        "scores": {
+          "明亮通透": 0.971503,
+          "昏暗氛围": 0.028497
+        }
+      }
+    }
+  },
+  {
+    "image_id": "living_room/living_04_pexels_7511701.jpg",
+    "room": "living_room",
+    "source_path": "data/raw/base_images/living_room/living_04_pexels_7511701.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.498062,
+        "scores": {
+          "暖色照明": 0.160809,
+          "中性色照明": 0.498062,
+          "冷色照明": 0.341129
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.790289,
+        "scores": {
+          "柔和漫射": 0.790289,
+          "硬朗定向": 0.209711
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.519358,
+        "scores": {
+          "间接照明": 0.480642,
+          "直接照明": 0.519358
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.710249,
+        "scores": {
+          "层次丰富": 0.289751,
+          "均匀平坦": 0.710249
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.95696,
+        "scores": {
+          "明亮通透": 0.95696,
+          "昏暗氛围": 0.04304
+        }
+      }
+    }
+  },
+  {
+    "image_id": "living_room/living_05_pexels_6890390.jpg",
+    "room": "living_room",
+    "source_path": "data/raw/base_images/living_room/living_05_pexels_6890390.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.952139,
+        "scores": {
+          "暖色照明": 0.033013,
+          "中性色照明": 0.952139,
+          "冷色照明": 0.014848
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.979185,
+        "scores": {
+          "柔和漫射": 0.979185,
+          "硬朗定向": 0.020815
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.580706,
+        "scores": {
+          "间接照明": 0.419294,
+          "直接照明": 0.580706
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.937733,
+        "scores": {
+          "层次丰富": 0.062267,
+          "均匀平坦": 0.937733
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.999961,
+        "scores": {
+          "明亮通透": 0.999961,
+          "昏暗氛围": 3.9e-05
+        }
+      }
+    }
+  },
+  {
+    "image_id": "living_room/living_06_pexels_6758512.jpg",
+    "room": "living_room",
+    "source_path": "data/raw/base_images/living_room/living_06_pexels_6758512.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.870081,
+        "scores": {
+          "暖色照明": 0.024129,
+          "中性色照明": 0.870081,
+          "冷色照明": 0.105789
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.875117,
+        "scores": {
+          "柔和漫射": 0.875117,
+          "硬朗定向": 0.124883
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.602704,
+        "scores": {
+          "间接照明": 0.397296,
+          "直接照明": 0.602704
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.52461,
+        "scores": {
+          "层次丰富": 0.47539,
+          "均匀平坦": 0.52461
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.998978,
+        "scores": {
+          "明亮通透": 0.998978,
+          "昏暗氛围": 0.001022
+        }
+      }
+    }
+  },
+  {
+    "image_id": "study/study_01_pexels_19227252.jpg",
+    "room": "study",
+    "source_path": "data/raw/base_images/study/study_01_pexels_19227252.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.960419,
+        "scores": {
+          "暖色照明": 0.036454,
+          "中性色照明": 0.960419,
+          "冷色照明": 0.003127
+        }
+      },
+      "光线柔和度": {
+        "label": "硬朗定向",
+        "confidence": 0.556325,
+        "scores": {
+          "柔和漫射": 0.443675,
+          "硬朗定向": 0.556325
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.929712,
+        "scores": {
+          "间接照明": 0.070288,
+          "直接照明": 0.929712
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.8956,
+        "scores": {
+          "层次丰富": 0.1044,
+          "均匀平坦": 0.8956
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.990544,
+        "scores": {
+          "明亮通透": 0.990544,
+          "昏暗氛围": 0.009456
+        }
+      }
+    }
+  },
+  {
+    "image_id": "study/study_02_pexels_7535030.jpg",
+    "room": "study",
+    "source_path": "data/raw/base_images/study/study_02_pexels_7535030.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.597693,
+        "scores": {
+          "暖色照明": 0.022359,
+          "中性色照明": 0.597693,
+          "冷色照明": 0.379949
+        }
+      },
+      "光线柔和度": {
+        "label": "硬朗定向",
+        "confidence": 0.732439,
+        "scores": {
+          "柔和漫射": 0.267561,
+          "硬朗定向": 0.732439
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.802468,
+        "scores": {
+          "间接照明": 0.197532,
+          "直接照明": 0.802468
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.542983,
+        "scores": {
+          "层次丰富": 0.457017,
+          "均匀平坦": 0.542983
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.734746,
+        "scores": {
+          "明亮通透": 0.734746,
+          "昏暗氛围": 0.265254
+        }
+      }
+    }
+  },
+  {
+    "image_id": "study/study_03_pexels_4307570.jpg",
+    "room": "study",
+    "source_path": "data/raw/base_images/study/study_03_pexels_4307570.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.858021,
+        "scores": {
+          "暖色照明": 0.138851,
+          "中性色照明": 0.858021,
+          "冷色照明": 0.003128
+        }
+      },
+      "光线柔和度": {
+        "label": "硬朗定向",
+        "confidence": 0.618251,
+        "scores": {
+          "柔和漫射": 0.381749,
+          "硬朗定向": 0.618251
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.724312,
+        "scores": {
+          "间接照明": 0.275688,
+          "直接照明": 0.724312
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.90229,
+        "scores": {
+          "层次丰富": 0.09771,
+          "均匀平坦": 0.90229
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.999223,
+        "scores": {
+          "明亮通透": 0.999223,
+          "昏暗氛围": 0.000777
+        }
+      }
+    }
+  },
+  {
+    "image_id": "study/study_04_pexels_5511088.jpg",
+    "room": "study",
+    "source_path": "data/raw/base_images/study/study_04_pexels_5511088.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.786078,
+        "scores": {
+          "暖色照明": 0.101379,
+          "中性色照明": 0.786078,
+          "冷色照明": 0.112543
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.53222,
+        "scores": {
+          "柔和漫射": 0.53222,
+          "硬朗定向": 0.46778
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.6442,
+        "scores": {
+          "间接照明": 0.6442,
+          "直接照明": 0.3558
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.94705,
+        "scores": {
+          "层次丰富": 0.05295,
+          "均匀平坦": 0.94705
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.994655,
+        "scores": {
+          "明亮通透": 0.994655,
+          "昏暗氛围": 0.005345
+        }
+      }
+    }
+  },
+  {
+    "image_id": "study/study_05_pexels_30843044.jpg",
+    "room": "study",
+    "source_path": "data/raw/base_images/study/study_05_pexels_30843044.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.830283,
+        "scores": {
+          "暖色照明": 0.830283,
+          "中性色照明": 0.155254,
+          "冷色照明": 0.014464
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.883577,
+        "scores": {
+          "柔和漫射": 0.883577,
+          "硬朗定向": 0.116423
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.674253,
+        "scores": {
+          "间接照明": 0.674253,
+          "直接照明": 0.325747
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.809711,
+        "scores": {
+          "层次丰富": 0.190289,
+          "均匀平坦": 0.809711
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.647371,
+        "scores": {
+          "明亮通透": 0.647371,
+          "昏暗氛围": 0.352629
+        }
+      }
+    }
+  },
+  {
+    "image_id": "study/study_06_pexels_32177387.jpg",
+    "room": "study",
+    "source_path": "data/raw/base_images/study/study_06_pexels_32177387.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.858062,
+        "scores": {
+          "暖色照明": 0.134172,
+          "中性色照明": 0.858062,
+          "冷色照明": 0.007767
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.564057,
+        "scores": {
+          "柔和漫射": 0.564057,
+          "硬朗定向": 0.435943
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.602241,
+        "scores": {
+          "间接照明": 0.397759,
+          "直接照明": 0.602241
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.799349,
+        "scores": {
+          "层次丰富": 0.200651,
+          "均匀平坦": 0.799349
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.970917,
+        "scores": {
+          "明亮通透": 0.970917,
+          "昏暗氛围": 0.029083
+        }
+      }
+    }
+  }
+]

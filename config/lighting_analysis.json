@@ -1,0 +1,16 @@
+{
+  "method_name": "Interpretable image-based lighting analysis baseline",
+  "method_version": "1.0.0",
+  "dark_threshold": 0.20,
+  "bright_threshold": 0.80,
+  "highlight_threshold": 0.88,
+  "warm_lab_b_threshold": 138,
+  "grid_rows": 4,
+  "grid_columns": 4,
+  "minimum_bright_component_area_ratio": 0.002,
+  "limitations": [
+    "指标基于单张 sRGB 图片，不等同于照度、色温或显色指数实测。",
+    "相机曝光、白平衡、窗外日光和后期处理都会影响结果。",
+    "该 baseline 用于相对比较和生成前后变化分析，不用于工程照明验收。"
+  ]
+}
