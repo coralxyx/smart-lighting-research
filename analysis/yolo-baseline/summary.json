@@ -1,0 +1,121 @@
+{
+  "method_name": "YOLO indoor-object detection baseline",
+  "method_version": "1.0.0",
+  "model": "yolo11n.pt",
+  "task": "detect",
+  "analysis_scope": "COCO pretrained indoor-object context baseline",
+  "image_count": 24,
+  "detected_image_count": 19,
+  "detection_coverage": 0.791667,
+  "relevant_detected_image_count": 19,
+  "relevant_detection_coverage": 0.791667,
+  "total_detection_count": 73,
+  "relevant_detection_count": 71,
+  "mean_inference_ms": 30.144,
+  "median_inference_ms": 30.144,
+  "class_summary": [
+    {
+      "class_name": "chair",
+      "count": 25,
+      "mean_confidence": 0.510301,
+      "is_indoor_relevant": true
+    },
+    {
+      "class_name": "couch",
+      "count": 14,
+      "mean_confidence": 0.667386,
+      "is_indoor_relevant": true
+    },
+    {
+      "class_name": "potted plant",
+      "count": 11,
+      "mean_confidence": 0.626025,
+      "is_indoor_relevant": true
+    },
+    {
+      "class_name": "bed",
+      "count": 6,
+      "mean_confidence": 0.773111,
+      "is_indoor_relevant": true
+    },
+    {
+      "class_name": "tv",
+      "count": 5,
+      "mean_confidence": 0.673833,
+      "is_indoor_relevant": true
+    },
+    {
+      "class_name": "dining table",
+      "count": 5,
+      "mean_confidence": 0.368599,
+      "is_indoor_relevant": true
+    },
+    {
+      "class_name": "book",
+      "count": 2,
+      "mean_confidence": 0.341198,
+      "is_indoor_relevant": true
+    },
+    {
+      "class_name": "clock",
+      "count": 2,
+      "mean_confidence": 0.6746,
+      "is_indoor_relevant": true
+    },
+    {
+      "class_name": "cat",
+      "count": 1,
+      "mean_confidence": 0.389859,
+      "is_indoor_relevant": false
+    },
+    {
+      "class_name": "cup",
+      "count": 1,
+      "mean_confidence": 0.759924,
+      "is_indoor_relevant": false
+    },
+    {
+      "class_name": "vase",
+      "count": 1,
+      "mean_confidence": 0.790454,
+      "is_indoor_relevant": true
+    }
+  ],
+  "room_summary": {
+    "bedroom": {
+      "images": 6,
+      "detected_images": 6,
+      "detections": 11,
+      "relevant_detections": 9
+    },
+    "hallway": {
+      "images": 6,
+      "detected_images": 1,
+      "detections": 5,
+      "relevant_detections": 5
+    },
+    "living_room": {
+      "images": 6,
+      "detected_images": 6,
+      "detections": 39,
+      "relevant_detections": 39
+    },
+    "study": {
+      "images": 6,
+      "detected_images": 6,
+      "detections": 18,
+      "relevant_detections": 18
+    }
+  },
+  "parameters": {
+    "image_size": 640,
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.7,
+    "device": "cpu"
+  },
+  "limitations": [
+    "COCO 预训练类别不包含吊灯、台灯、落地灯、灯带和射灯。",
+    "该 baseline 用于验证室内空间对象检测流程，不代表已完成灯具细分类。",
+    "当前环境使用 CPU 推理；后续训练建议安装与本机 CUDA 匹配的 PyTorch。"
+  ]
+}

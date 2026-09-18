@@ -22,3 +22,8 @@ Thumbs.db
 
 # Reproducible intermediate outputs
 data/interim/valid-original-text-results-structured.xlsx
+
+# Generated inspection caches and local model weights
+*.xlsx.inspect.ndjson
+*.pt
+runs/

@@ -200,7 +200,7 @@ Web 是展示和交互层，在数据、统计方法及视觉模块稳定后实�
 - [x] 实现 Kano-inspired v2
 - [x] 将 Legacy 与 v2 纳入可视化数据契约
 - [x] 输出答辩图表和 Web 数据
-- [ ] 完成 YOLO 家具/灯具检测 baseline
+- [x] 完成 YOLO 室内对象检测 baseline；灯具细分类保留为后续自定义数据任务
 - [ ] 完成光照区域分割 baseline
 - [ ] 完成 OpenCLIP 美学属性识别 baseline
 - [ ] 视时间开展文本语义聚类实验

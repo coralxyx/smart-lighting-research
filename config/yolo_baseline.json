@@ -1,0 +1,29 @@
+{
+  "method_name": "YOLO indoor-object detection baseline",
+  "method_version": "1.0.0",
+  "model": "yolo11n.pt",
+  "task": "detect",
+  "image_size": 640,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.7,
+  "device": "cpu",
+  "relevant_coco_classes": [
+    "chair",
+    "couch",
+    "bed",
+    "dining table",
+    "tv",
+    "laptop",
+    "potted plant",
+    "clock",
+    "vase",
+    "book",
+    "remote",
+    "cell phone"
+  ],
+  "limitations": [
+    "COCO 预训练类别不包含吊灯、台灯、落地灯、灯带和射灯。",
+    "该 baseline 用于验证室内空间对象检测流程，不代表已完成灯具细分类。",
+    "当前环境使用 CPU 推理；后续训练建议安装与本机 CUDA 匹配的 PyTorch。"
+  ]
+}
