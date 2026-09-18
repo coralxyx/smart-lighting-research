@@ -1,0 +1,15 @@
+﻿image_id,room,class_id,class_name,confidence,is_indoor_relevant,x1,y1,x2,y2,center_x,center_y,area_ratio
+bedroom/bedroom_heldout_01_pexels_36639777.jpg,bedroom,59,bed,0.909317,True,0.0,0.344938,0.997824,0.997999,0.498912,0.671468,0.65164
+living_room/living_heldout_01_pexels_31751141.jpg,living_room,57,couch,0.832637,True,0.203361,0.607,0.752245,0.857154,0.477803,0.732077,0.137306
+living_room/living_heldout_01_pexels_31751141.jpg,living_room,73,book,0.647143,True,0.591357,0.899747,0.743011,0.989081,0.667184,0.944414,0.013548
+living_room/living_heldout_01_pexels_31751141.jpg,living_room,75,vase,0.593096,True,0.784932,0.454397,0.884059,0.539431,0.834495,0.496914,0.008429
+living_room/living_heldout_01_pexels_31751141.jpg,living_room,56,chair,0.535086,True,0.812569,0.608301,0.999215,0.8337,0.905892,0.721001,0.04207
+living_room/living_heldout_01_pexels_31751141.jpg,living_room,57,couch,0.495923,True,0.814079,0.607649,0.999703,0.832162,0.906891,0.719905,0.041675
+living_room/living_heldout_01_pexels_31751141.jpg,living_room,45,bowl,0.377859,False,0.42293,0.855071,0.580931,0.956501,0.501931,0.905786,0.016026
+study/study_heldout_01_pexels_7014764.jpg,study,63,laptop,0.874444,True,0.377524,0.547648,0.53718,0.74148,0.457352,0.644564,0.030946
+study/study_heldout_01_pexels_7014764.jpg,study,58,potted plant,0.855427,True,0.710774,0.527114,0.999333,0.988986,0.855054,0.75805,0.133277
+study/study_heldout_01_pexels_7014764.jpg,study,56,chair,0.72331,True,0.247261,0.841448,0.699926,0.992894,0.473594,0.917171,0.068554
+study/study_heldout_01_pexels_7014764.jpg,study,58,potted plant,0.470031,True,0.241508,0.572462,0.323387,0.709859,0.282447,0.641161,0.01125
+study/study_heldout_01_pexels_7014764.jpg,study,73,book,0.411656,True,0.650454,0.54767,0.691029,0.709262,0.670742,0.628466,0.006557
+study/study_heldout_01_pexels_7014764.jpg,study,73,book,0.36024,True,0.675044,0.553554,0.71178,0.712153,0.693412,0.632854,0.005826
+study/study_heldout_01_pexels_7014764.jpg,study,73,book,0.308933,True,0.670881,0.551511,0.699716,0.709803,0.685299,0.630657,0.004564

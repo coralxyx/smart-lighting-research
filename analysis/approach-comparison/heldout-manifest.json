@@ -1,0 +1,77 @@
+[
+  {
+    "image_id": "study_heldout_01",
+    "task_id": "T01",
+    "scene": "study",
+    "scene_cn": "学习工作",
+    "user_brief": "提高专注和视觉舒适，保证桌面任务照明并控制眩光。",
+    "author": "cottonbro studio",
+    "source_page": "https://www.pexels.com/photo/interior-design-of-a-home-office-7014764/",
+    "source_id": "7014764",
+    "file": "data/evaluation/heldout-images/study/study_heldout_01_pexels_7014764.jpg",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "sha256": "bbd49cca651224b54e54d1b1627e77df6cbda8fa99e3e48bf598bc7bd2761185",
+    "dhash": "32ba6a4accc9e973",
+    "width": 5922,
+    "height": 3948,
+    "duplicate_check": {
+      "exact_duplicate": false,
+      "near_duplicate": false,
+      "minimum_dhash_distance": 23,
+      "nearest_existing_file": "data/raw/base_images/bedroom/bedroom_05_pexels_7546559.jpg",
+      "comparison_count": 30,
+      "near_duplicate_threshold": 5
+    }
+  },
+  {
+    "image_id": "bedroom_heldout_01",
+    "task_id": "T02",
+    "scene": "bedroom",
+    "scene_cn": "睡眠与起居",
+    "user_brief": "支持睡前放松、降低刺激，同时保留基本可见度。",
+    "author": "Irina Novikova",
+    "source_page": "https://www.pexels.com/photo/cozy-bedroom-interior-with-warm-lighting-36639777/",
+    "source_id": "36639777",
+    "file": "data/evaluation/heldout-images/bedroom/bedroom_heldout_01_pexels_36639777.jpg",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "sha256": "b0e97655757dcb0b2bdbf93751b7ec79f6b1ed6e37fd68a9aa2fdc176bfd187d",
+    "dhash": "10408fb9719ee6e4",
+    "width": 3939,
+    "height": 5908,
+    "duplicate_check": {
+      "exact_duplicate": false,
+      "near_duplicate": false,
+      "minimum_dhash_distance": 26,
+      "nearest_existing_file": "data/raw/base_images/hallway/hallway_03_pexels_6489085.jpg",
+      "comparison_count": 30,
+      "near_duplicate_threshold": 5
+    }
+  },
+  {
+    "image_id": "living_heldout_01",
+    "task_id": "T03",
+    "scene": "living_room",
+    "scene_cn": "休闲娱乐",
+    "user_brief": "提升舒适休闲氛围，同时保持空间层次且不过暗。",
+    "author": "Natalia S",
+    "source_page": "https://www.pexels.com/photo/modern-minimalist-living-room-with-ambient-lighting-31751141/",
+    "source_id": "31751141",
+    "file": "data/evaluation/heldout-images/living_room/living_heldout_01_pexels_31751141.jpg",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "sha256": "6b14941559260e19f1cfad1ef4f39e34695862c6710140ffa866f45b28393003",
+    "dhash": "278181c743f19190",
+    "width": 3024,
+    "height": 4032,
+    "duplicate_check": {
+      "exact_duplicate": false,
+      "near_duplicate": false,
+      "minimum_dhash_distance": 22,
+      "nearest_existing_file": "data/raw/base_images/living_room/living_03_pexels_6186821.jpg",
+      "comparison_count": 30,
+      "near_duplicate_threshold": 5
+    }
+  }
+]

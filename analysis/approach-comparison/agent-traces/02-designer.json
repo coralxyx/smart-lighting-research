@@ -1,0 +1,58 @@
+{
+  "role": "needs_lighting_prompt_designer",
+  "input_scope": ["observer trace", "scene labels", "user briefs"],
+  "forbidden_inputs": ["Kano", "YOLO", "OpenCLIP", "lighting baseline", "parameter mapping"],
+  "designs": [
+    {
+      "task_id": "T01",
+      "observed_problems": ["整体偏暗且背景偏冷，屏幕、桌面与深蓝墙之间可能反差过大", "任务区主要依赖左侧台灯，桌面照明可能不均匀", "灯罩高光或屏幕反射可能影响舒适度"],
+      "recommendation": {
+        "target_feelings": ["专注", "清晰", "稳定", "视觉舒适"],
+        "color_temperature": {"min_kelvin": 3500, "max_kelvin": 4200, "description": "中性偏暖白光"},
+        "brightness_strategy": "提高桌面任务光，并适度抬升电脑后方和深蓝墙环境亮度；桌面保持最亮但缩小亮度落差。",
+        "lighting_distribution": "现有左侧台灯覆盖键盘、书本与主要工作面，背景保持柔和低一级亮度。",
+        "directness": "mixed",
+        "glare_control": "压低灯罩高光和桌面反射，避免屏幕眩光。",
+        "control_strategy": "专注场景联动主要任务光与低至中等强度背景补光。",
+        "preservation_constraints": ["视角与裁切", "深蓝墙与木桌", "台灯、电脑、书本和绿植的身份、数量与位置"]
+      },
+      "uncertainties": ["无法确认台灯调光调色能力", "无法确认实际反射眩光", "无法确认画面外光源"],
+      "image_prompt": "Edit lighting only in this existing study image. Create a focused, visually comfortable study-lighting scene using only the fixtures and light sources already present. Set the apparent light to a neutral-warm 3500–4200 K range. Increase the useful illumination from the existing lamp on the left so the keyboard, books, and main wooden desktop are evenly readable, while keeping the task surface as the brightest zone. Gently lift the ambient illumination on the dark blue wall and around the computer to reduce harsh screen-to-background contrast. Use soft-edged, controlled semi-direct light with natural falloff, restrained highlights, and no visible glare or strong reflection on the monitor or desk. Preserve the exact camera viewpoint, perspective, crop, architecture, wall colors, furniture, decorations, object identities, object counts, object positions, materials, and geometry. Do not add, remove, replace, resize, or move anything; change only illumination, shadows, reflections, brightness, and apparent color temperature.",
+      "negative_constraints": ["no new or removed fixtures", "no object or geometry changes", "no people or text", "no cold blue cast or glare"]
+    },
+    {
+      "task_id": "T02",
+      "observed_problems": ["整体较暗且基本可见度有限", "暖光集中在床头局部，其他区域可能缺乏层次", "床头灯与深色环境可能反差突兀"],
+      "recommendation": {
+        "target_feelings": ["放松", "安静", "温暖", "低刺激"],
+        "color_temperature": {"min_kelvin": 2200, "max_kelvin": 2700, "description": "低色温暖光"},
+        "brightness_strategy": "维持低亮度，适度提高床面、床沿和近处背景的最低可见度。",
+        "lighting_distribution": "床头灯形成柔和宽缓照明，通过自然反射提供微弱填充，背景暗而保留细节。",
+        "directness": "indirect",
+        "glare_control": "降低灯罩高光，保持柔和过渡，避免床品亮斑。",
+        "control_strategy": "睡前场景以床头灯低至中低亮度为主，保留进一步渐暗余量。",
+        "preservation_constraints": ["视角与裁切", "深色墙面与床品", "床头灯和全部物体的身份、数量与位置"]
+      },
+      "uncertainties": ["无法确认床头灯调光调色能力", "无法确认其他既有光源", "无法确认个人暗度偏好"],
+      "image_prompt": "Edit lighting only in this existing bedroom image. Create a calm, low-stimulation pre-sleep atmosphere using only the light sources and fixtures already present. Keep the existing bedside lamp on the left as the primary warm light and set the apparent color temperature to 2200–2700 K. Maintain low overall brightness, but gently raise visibility across the bed, bed edge, and nearby background so forms remain readable and safe without making the room feel bright. Spread the existing warm light softly with smooth falloff and subtle reflected fill; preserve deeper background shadows while retaining detail. Suppress any exposed-source glare, hot spots, hard shadows, or shiny highlights. Preserve the exact camera viewpoint, perspective, crop, architecture, wall colors, furniture, bedding, decorations, object identities, object counts, object positions, materials, and geometry. Do not add, remove, replace, resize, or move anything; change only illumination, shadows, reflections, brightness, and apparent color temperature.",
+      "negative_constraints": ["no new or removed fixtures", "no object or geometry changes", "no people or text", "no cool light, daytime brightness or glare"]
+    },
+    {
+      "task_id": "T03",
+      "observed_problems": ["总体偏暗，沙发活动区可见度有限", "层板灯层次明显但光色混合", "亮灯带与暗背景反差可能过大"],
+      "recommendation": {
+        "target_feelings": ["舒适", "休闲", "温暖", "有层次"],
+        "color_temperature": {"min_kelvin": 2700, "max_kelvin": 3200, "description": "暖白至柔和中性暖白"},
+        "brightness_strategy": "适度提高沙发活动区环境亮度，压低过亮灯带与暗背景的反差。",
+        "lighting_distribution": "以现有层板灯形成连续纵深节奏，通过柔和反射少量照亮沙发。",
+        "directness": "indirect",
+        "glare_control": "限制灯带亮边与过曝，减少柜体反光。",
+        "control_strategy": "休闲场景统一现有层板灯暖色与中低强度，柔和抬升沙发区。",
+        "preservation_constraints": ["视角与透视", "沙发和整墙柜体", "所有层板、灯具与装饰的身份、数量与位置"]
+      },
+      "uncertainties": ["无法确认各层板灯能否独立控制", "无法确认混色来源", "无法确认沙发区其他既有光源"],
+      "image_prompt": "Edit lighting only in this existing living-room image. Create a comfortable, relaxed, layered evening atmosphere using only the fixtures and light sources already present. Harmonize the apparent light color across the existing shelf lights and ambient illumination to 2700–3200 K, removing distracting mixed color casts while keeping materials natural. Slightly raise the ambient visibility of the beige sofa and main seating area so the room does not feel too dark. Preserve the full-wall cabinetry and its multiple existing shelf-light layers, but make their output more continuous and balanced, with gentle depth, smooth falloff, and restrained contrast rather than isolated bright strips. Reduce clipped highlights and reflective glare on cabinet surfaces while retaining clear foreground, midground, and background separation. Preserve the exact camera viewpoint, perspective, crop, architecture, wall colors, furniture, cabinetry, shelves, decorations, object identities, object counts, object positions, materials, and geometry. Do not add, remove, replace, resize, or move anything; change only illumination, shadows, reflections, brightness, and apparent color temperature.",
+      "negative_constraints": ["no new or removed fixtures", "no object or geometry changes", "no people or text", "no mixed color cast, neon colors or glare"]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+﻿image_id,room,class_id,class_name,confidence,is_indoor_relevant,x1,y1,x2,y2,center_x,center_y,area_ratio
+bedroom/direct-multi-agent-r01.png,bedroom,59,bed,0.926502,True,0.0,0.310823,0.994745,0.998113,0.497372,0.654468,0.683679
+bedroom/direct-multi-agent-r02.png,bedroom,59,bed,0.934109,True,0.0,0.31322,0.995797,0.99837,0.497899,0.655795,0.68227
+bedroom/evidence-pipeline-r01.png,bedroom,59,bed,0.935672,True,0.0,0.320497,0.994924,0.997958,0.497462,0.659227,0.674022
+bedroom/evidence-pipeline-r02.png,bedroom,59,bed,0.934646,True,0.0,0.317171,0.9953,0.998283,0.49765,0.657727,0.67791
+living_room/direct-multi-agent-r01.png,living_room,57,couch,0.766192,True,0.206527,0.604656,0.753678,0.857968,0.480102,0.731312,0.1386
+living_room/direct-multi-agent-r01.png,living_room,75,vase,0.763977,True,0.784436,0.453968,0.883913,0.540195,0.834175,0.497081,0.008578
+living_room/direct-multi-agent-r01.png,living_room,73,book,0.706218,True,0.58948,0.899199,0.744092,0.988551,0.666786,0.943875,0.013815
+living_room/direct-multi-agent-r01.png,living_room,57,couch,0.689681,True,0.813258,0.607323,0.999188,0.833939,0.906223,0.720631,0.042135
+living_room/direct-multi-agent-r01.png,living_room,75,vase,0.307344,True,0.588433,0.204106,0.637809,0.297817,0.613121,0.250961,0.004627
+living_room/direct-multi-agent-r02.png,living_room,75,vase,0.793489,True,0.784852,0.453889,0.884485,0.540593,0.834668,0.497241,0.008639
+living_room/direct-multi-agent-r02.png,living_room,57,couch,0.779876,True,0.209435,0.604515,0.753697,0.859357,0.481566,0.731936,0.138701
+living_room/direct-multi-agent-r02.png,living_room,57,couch,0.68172,True,0.814087,0.607402,0.999111,0.833802,0.906599,0.720602,0.041889
+living_room/direct-multi-agent-r02.png,living_room,73,book,0.667242,True,0.590024,0.899518,0.743689,0.988512,0.666857,0.944015,0.013675
+living_room/direct-multi-agent-r02.png,living_room,75,vase,0.38225,True,0.577549,0.440633,0.666255,0.540102,0.621902,0.490368,0.008823
+living_room/evidence-pipeline-r01.png,living_room,75,vase,0.736834,True,0.784717,0.453811,0.884407,0.540224,0.834562,0.497018,0.008615
+living_room/evidence-pipeline-r01.png,living_room,73,book,0.698908,True,0.590725,0.899594,0.74404,0.98827,0.667383,0.943932,0.013595
+living_room/evidence-pipeline-r01.png,living_room,57,couch,0.690425,True,0.206721,0.604742,0.753271,0.859322,0.479996,0.732032,0.139141
+living_room/evidence-pipeline-r01.png,living_room,57,couch,0.657201,True,0.814211,0.607065,0.999211,0.833402,0.906711,0.720233,0.041872
+living_room/evidence-pipeline-r01.png,living_room,75,vase,0.40822,True,0.58796,0.204714,0.63762,0.299045,0.61279,0.25188,0.004684
+living_room/evidence-pipeline-r01.png,living_room,75,vase,0.306633,True,0.577175,0.440539,0.666423,0.540169,0.621799,0.490354,0.008892
+living_room/evidence-pipeline-r02.png,living_room,75,vase,0.791037,True,0.784392,0.453771,0.884046,0.53967,0.834219,0.496721,0.00856
+living_room/evidence-pipeline-r02.png,living_room,57,couch,0.76683,True,0.206336,0.604361,0.753481,0.856774,0.479909,0.730567,0.138107
+living_room/evidence-pipeline-r02.png,living_room,57,couch,0.722877,True,0.813318,0.607286,0.999333,0.833215,0.906326,0.72025,0.042026
+living_room/evidence-pipeline-r02.png,living_room,73,book,0.691338,True,0.589452,0.898918,0.743375,0.988825,0.666414,0.943872,0.013839
+living_room/evidence-pipeline-r02.png,living_room,75,vase,0.307728,True,0.575914,0.440905,0.665685,0.539938,0.6208,0.490421,0.00889
+living_room/evidence-pipeline-r02.png,living_room,75,vase,0.293018,True,0.588613,0.204121,0.63801,0.298387,0.613311,0.251254,0.004657
+study/direct-multi-agent-r01.png,study,63,laptop,0.887318,True,0.377354,0.547637,0.537421,0.743414,0.457387,0.645526,0.031338
+study/direct-multi-agent-r01.png,study,56,chair,0.782785,True,0.24682,0.839588,0.700871,0.992759,0.473846,0.916173,0.069547
+study/direct-multi-agent-r01.png,study,58,potted plant,0.758419,True,0.708787,0.528774,0.999302,0.988733,0.854044,0.758753,0.133625
+study/direct-multi-agent-r01.png,study,58,potted plant,0.421818,True,0.240135,0.560046,0.323282,0.710775,0.281709,0.635411,0.012533
+study/direct-multi-agent-r01.png,study,73,book,0.332602,True,0.674519,0.552663,0.71346,0.711665,0.69399,0.632164,0.006192
+study/direct-multi-agent-r01.png,study,73,book,0.329547,True,0.65027,0.546831,0.690464,0.708181,0.670367,0.627506,0.006485
+study/direct-multi-agent-r01.png,study,73,book,0.263278,True,0.671909,0.550292,0.700611,0.708836,0.68626,0.629564,0.004551
+study/direct-multi-agent-r02.png,study,63,laptop,0.880741,True,0.377684,0.548021,0.537892,0.742081,0.457788,0.645051,0.03109
+study/direct-multi-agent-r02.png,study,56,chair,0.818065,True,0.246755,0.837032,0.701103,0.992679,0.473929,0.914856,0.070718
+study/direct-multi-agent-r02.png,study,58,potted plant,0.812901,True,0.708929,0.528504,0.999311,0.988642,0.85412,0.758573,0.133616
+study/direct-multi-agent-r02.png,study,58,potted plant,0.554699,True,0.239564,0.559507,0.324088,0.710602,0.281826,0.635054,0.012771
+study/direct-multi-agent-r02.png,study,73,book,0.354974,True,0.650686,0.545568,0.688475,0.704011,0.66958,0.62479,0.005987
+study/direct-multi-agent-r02.png,study,73,book,0.344127,True,0.674306,0.552074,0.714615,0.710813,0.69446,0.631443,0.006399
+study/direct-multi-agent-r02.png,study,45,bowl,0.259821,False,0.16878,0.677,0.26013,0.725797,0.214455,0.701398,0.004458
+study/direct-multi-agent-r02.png,study,73,book,0.255698,True,0.672344,0.550565,0.700693,0.70784,0.686519,0.629202,0.004458
+study/evidence-pipeline-r01.png,study,63,laptop,0.886012,True,0.376645,0.548192,0.538097,0.743715,0.457371,0.645954,0.031568
+study/evidence-pipeline-r01.png,study,58,potted plant,0.802128,True,0.709325,0.529238,0.999269,0.988439,0.854297,0.758839,0.133142
+study/evidence-pipeline-r01.png,study,56,chair,0.793264,True,0.246286,0.838769,0.70054,0.992942,0.473413,0.915856,0.070034
+study/evidence-pipeline-r01.png,study,58,potted plant,0.541906,True,0.240679,0.564271,0.322879,0.710418,0.281779,0.637345,0.012013
+study/evidence-pipeline-r01.png,study,73,book,0.390668,True,0.674785,0.553561,0.714236,0.711477,0.694511,0.632519,0.00623
+study/evidence-pipeline-r01.png,study,73,book,0.387541,True,0.6504,0.547364,0.689684,0.708417,0.670042,0.627891,0.006327
+study/evidence-pipeline-r01.png,study,73,book,0.289191,True,0.672275,0.551507,0.701284,0.708965,0.686779,0.630236,0.004568
+study/evidence-pipeline-r02.png,study,63,laptop,0.873276,True,0.377764,0.547512,0.537417,0.743129,0.45759,0.64532,0.031231
+study/evidence-pipeline-r02.png,study,56,chair,0.817842,True,0.246117,0.836432,0.700757,0.993094,0.473437,0.914763,0.071225
+study/evidence-pipeline-r02.png,study,58,potted plant,0.778599,True,0.70808,0.528273,0.999281,0.988342,0.853681,0.758308,0.133972
+study/evidence-pipeline-r02.png,study,58,potted plant,0.611307,True,0.240235,0.563145,0.323343,0.710238,0.281789,0.636691,0.012225
+study/evidence-pipeline-r02.png,study,73,book,0.362986,True,0.650421,0.545359,0.688798,0.703628,0.669609,0.624494,0.006074
+study/evidence-pipeline-r02.png,study,73,book,0.350541,True,0.674413,0.551544,0.713886,0.711128,0.694149,0.631336,0.006299
+study/evidence-pipeline-r02.png,study,45,bowl,0.344742,False,0.168742,0.676878,0.2606,0.725887,0.214671,0.701383,0.004502
+study/evidence-pipeline-r02.png,study,73,book,0.264507,True,0.672209,0.550053,0.70145,0.707937,0.686829,0.628995,0.004617

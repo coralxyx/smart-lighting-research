@@ -122,6 +122,9 @@ tbody tr:hover { background: #f5f7f1; }
 .result.partial { color: #a64e2e; }
 .boundary { display: flex; gap: 22px; margin-top: 22px; padding: 22px; border: 1px solid #ddcaa8; background: #fff6e6; }
 .boundary p { margin: 0; color: #705d41; }
+.finding-list { display: grid; gap: 14px; }
+.finding-list p { margin: 0; padding: 15px 16px; border-left: 3px solid var(--lime); background: #f3f5ee; color: var(--muted); line-height: 1.65; }
+.finding-list strong { color: var(--ink); }
 
 footer { display: flex; justify-content: space-between; padding: 24px 4vw; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
 #error-banner { position: fixed; right: 20px; bottom: 20px; max-width: 480px; padding: 16px 18px; border-radius: 5px; background: #8f322c; color: white; box-shadow: var(--shadow); }

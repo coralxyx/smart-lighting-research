@@ -1,0 +1,34 @@
+{
+  "role": "observer",
+  "input_scope": ["heldout images", "scene labels", "user briefs"],
+  "forbidden_inputs": ["Kano", "YOLO", "OpenCLIP", "lighting baseline", "parameter mapping"],
+  "observations": [
+    {
+      "task_id": "T01",
+      "scene": "study",
+      "visible_facts": ["深蓝色墙面", "木质桌面", "中央笔记本电脑", "右侧书本和绿植", "整体亮度较低且背景冷蓝"],
+      "existing_light_sources": ["左侧白色可调台灯", "台灯照亮局部桌面"],
+      "possible_visual_issues": ["照明集中于台灯附近", "桌面明暗差异可能较明显", "冷色背景与局部任务光对比较强"],
+      "preservation_constraints": ["深蓝墙面与空间边界", "木质桌面", "台灯位置和结构", "笔记本电脑", "书本与绿植布局"],
+      "uncertainty": ["图片工具受限，依据父 Agent 对原图预览的事实描述", "无法确认实际色温、照度和眩光"]
+    },
+    {
+      "task_id": "T02",
+      "scene": "bedroom",
+      "visible_facts": ["深色墙面", "深色床品", "床面和背景较暗", "暖色局部照明"],
+      "existing_light_sources": ["左侧小型床头灯", "床头灯发出暖色光"],
+      "possible_visual_issues": ["照明范围集中在床头附近", "床面与背景亮度层次有限", "深色材料降低可见度"],
+      "preservation_constraints": ["床与床品", "深色墙面", "左侧床头灯", "现有卧室布局"],
+      "uncertainty": ["图片工具受限，依据父 Agent 对原图预览的事实描述", "无法确认实际色温和亮度"]
+    },
+    {
+      "task_id": "T03",
+      "scene": "living_room",
+      "visible_facts": ["米色沙发", "整墙柜体", "多条线性层板灯", "暖白与中性白并存", "环境偏暗但层次明显"],
+      "existing_light_sources": ["柜体线性层板灯", "暖白和中性白局部光"],
+      "possible_visual_issues": ["柜体亮区与环境反差较高", "光色可能不一致", "沙发活动区照明弱于柜体"],
+      "preservation_constraints": ["沙发形态与位置", "整墙柜体结构", "层板与灯带关系", "空间纵深"],
+      "uncertainty": ["图片工具受限，依据父 Agent 对原图预览的事实描述", "无法确认实际色温和独立控制方式"]
+    }
+  ]
+}

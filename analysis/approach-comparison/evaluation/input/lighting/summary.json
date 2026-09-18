@@ -1,0 +1,99 @@
+{
+  "method_name": "Interpretable image-based lighting analysis baseline",
+  "method_version": "1.0.0",
+  "image_count": 3,
+  "global_mean": {
+    "mean_luminance": 0.178066,
+    "luminance_std": 0.180375,
+    "dynamic_range_p95_p05": 0.535948,
+    "dark_area_ratio": 0.684038,
+    "bright_area_ratio": 0.012112,
+    "highlight_area_ratio": 0.007138,
+    "local_contrast_mean": 0.034624,
+    "spatial_layering_std": 0.085322,
+    "luminance_entropy": 0.821899,
+    "warm_pixel_ratio": 0.199072,
+    "warmth_index": 0.004078,
+    "bright_region_count": 0.666667,
+    "bright_region_concentration": 0.666667
+  },
+  "room_mean": {
+    "bedroom": {
+      "mean_luminance": 0.184447,
+      "luminance_std": 0.185468,
+      "dynamic_range_p95_p05": 0.537255,
+      "dark_area_ratio": 0.659259,
+      "bright_area_ratio": 0.003216,
+      "highlight_area_ratio": 0.002698,
+      "local_contrast_mean": 0.027263,
+      "spatial_layering_std": 0.105029,
+      "luminance_entropy": 0.806263,
+      "warm_pixel_ratio": 0.325962,
+      "warmth_index": 0.034469,
+      "bright_region_count": 1.0,
+      "bright_region_concentration": 1.0
+    },
+    "living_room": {
+      "mean_luminance": 0.226008,
+      "luminance_std": 0.225433,
+      "dynamic_range_p95_p05": 0.690196,
+      "dark_area_ratio": 0.55307,
+      "bright_area_ratio": 0.029261,
+      "highlight_area_ratio": 0.017213,
+      "local_contrast_mean": 0.057983,
+      "spatial_layering_std": 0.107544,
+      "luminance_entropy": 0.884264,
+      "warm_pixel_ratio": 0.219555,
+      "warmth_index": 0.045022,
+      "bright_region_count": 1.0,
+      "bright_region_concentration": 1.0
+    },
+    "study": {
+      "mean_luminance": 0.123742,
+      "luminance_std": 0.130224,
+      "dynamic_range_p95_p05": 0.380392,
+      "dark_area_ratio": 0.839785,
+      "bright_area_ratio": 0.003858,
+      "highlight_area_ratio": 0.001504,
+      "local_contrast_mean": 0.018626,
+      "spatial_layering_std": 0.043392,
+      "luminance_entropy": 0.775171,
+      "warm_pixel_ratio": 0.0517,
+      "warmth_index": -0.067258,
+      "bright_region_count": 0.0,
+      "bright_region_concentration": 0.0
+    }
+  },
+  "extremes": {
+    "brightest": {
+      "image_id": "living_room/living_heldout_01_pexels_31751141.jpg",
+      "mean_luminance": 0.226008
+    },
+    "darkest": {
+      "image_id": "study/study_heldout_01_pexels_7014764.jpg",
+      "mean_luminance": 0.123742
+    },
+    "most_spatially_layered": {
+      "image_id": "living_room/living_heldout_01_pexels_31751141.jpg",
+      "spatial_layering_std": 0.107544
+    },
+    "warmest_proxy": {
+      "image_id": "living_room/living_heldout_01_pexels_31751141.jpg",
+      "warmth_index": 0.045022
+    }
+  },
+  "parameters": {
+    "dark_threshold": 0.2,
+    "bright_threshold": 0.8,
+    "highlight_threshold": 0.88,
+    "warm_lab_b_threshold": 138,
+    "grid_rows": 4,
+    "grid_columns": 4,
+    "minimum_bright_component_area_ratio": 0.002
+  },
+  "limitations": [
+    "指标基于单张 sRGB 图片，不等同于照度、色温或显色指数实测。",
+    "相机曝光、白平衡、窗外日光和后期处理都会影响结果。",
+    "该 baseline 用于相对比较和生成前后变化分析，不用于工程照明验收。"
+  ]
+}

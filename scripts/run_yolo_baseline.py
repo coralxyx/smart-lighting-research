@@ -80,6 +80,8 @@ def save_annotated(result: Any, destination: Path) -> None:
 
 
 def run_predictions(config: dict[str, Any], input_dir: Path, output_dir: Path) -> list[dict[str, Any]]:
+    input_dir = input_dir.resolve()
+    output_dir = output_dir.resolve()
     images = find_images(input_dir)
     if not images:
         raise RuntimeError(f'No images found under {input_dir}')
@@ -101,10 +103,14 @@ def run_predictions(config: dict[str, Any], input_dir: Path, output_dir: Path) -
         relative = image_path.relative_to(input_dir)
         annotated_path = output_dir / 'annotated' / relative.with_suffix('.jpg')
         save_annotated(result, annotated_path)
+        try:
+            source_path = image_path.relative_to(PROJECT_ROOT).as_posix()
+        except ValueError:
+            source_path = image_path.as_posix()
         records.append({
             'image_id': relative.as_posix(),
             'room': image_room(image_path, input_dir),
-            'source_path': (Path('data') / 'raw' / 'base_images' / relative).as_posix(),
+            'source_path': source_path,
             'annotated_path': annotated_path.relative_to(PROJECT_ROOT).as_posix(),
             'width': width,
             'height': height,

@@ -1,0 +1,1246 @@
+[
+  {
+    "run_id": "T01-evidence_pipeline-r01",
+    "task_id": "T01",
+    "method": "evidence_pipeline",
+    "repeat": 1,
+    "result_path": "analysis/approach-comparison/images/study/evidence-pipeline-r01.png",
+    "lighting": {
+      "image_id": "study/evidence-pipeline-r01.png",
+      "room": "study",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/study/evidence-pipeline-r01.png",
+      "width": 1536,
+      "height": 1024,
+      "mean_luminance": 0.149714,
+      "luminance_std": 0.146786,
+      "luminance_p05": 0.019608,
+      "luminance_p95": 0.458824,
+      "dynamic_range_p95_p05": 0.439216,
+      "dark_area_ratio": 0.818047,
+      "bright_area_ratio": 0.00919,
+      "highlight_area_ratio": 0.003994,
+      "local_contrast_mean": 0.041311,
+      "spatial_layering_std": 0.055962,
+      "luminance_entropy": 0.81178,
+      "warm_pixel_ratio": 0.097887,
+      "warmth_index": -0.023843,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.303071,
+        0.608161
+      ],
+      "grid_luminance": [
+        0.103236,
+        0.11696,
+        0.105483,
+        0.158997,
+        0.118872,
+        0.197877,
+        0.117022,
+        0.150364,
+        0.209865,
+        0.28587,
+        0.234611,
+        0.131445,
+        0.079046,
+        0.173206,
+        0.133444,
+        0.079117
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": 0.025972,
+      "dark_area_ratio": -0.021738,
+      "warm_pixel_ratio": 0.046187,
+      "warmth_index": 0.043415,
+      "local_contrast_mean": 0.022685,
+      "spatial_layering_std": 0.01257
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.060962,
+        "neutral": 0.041845,
+        "soft": 0.408792,
+        "indirect": 0.155543,
+        "layered": 0.240824,
+        "bright": 0.026435
+      },
+      "direction_checks": {
+        "neutral": false,
+        "brighter": true,
+        "less_dark": true,
+        "layering_preserved": true
+      },
+      "direction_hit_rate": 0.75
+    },
+    "object_preservation": {
+      "source_classes": [
+        "book",
+        "chair",
+        "laptop",
+        "potted plant"
+      ],
+      "result_classes": [
+        "book",
+        "chair",
+        "laptop",
+        "potted plant"
+      ],
+      "class_jaccard": 1.0,
+      "source_relevant_count": 7,
+      "result_relevant_count": 7
+    },
+    "structure_preservation": {
+      "source_keypoints": 2109,
+      "result_keypoints": 2381,
+      "good_matches": 849,
+      "match_ratio": 0.40256,
+      "homography_inlier_ratio": 0.982332,
+      "dhash_distance_from_input": 5
+    },
+    "process": {
+      "evidence_count": 7,
+      "trace_role_count": 0,
+      "source_locatable": true
+    }
+  },
+  {
+    "run_id": "T01-evidence_pipeline-r02",
+    "task_id": "T01",
+    "method": "evidence_pipeline",
+    "repeat": 2,
+    "result_path": "analysis/approach-comparison/images/study/evidence-pipeline-r02.png",
+    "lighting": {
+      "image_id": "study/evidence-pipeline-r02.png",
+      "room": "study",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/study/evidence-pipeline-r02.png",
+      "width": 1536,
+      "height": 1024,
+      "mean_luminance": 0.151968,
+      "luminance_std": 0.147139,
+      "luminance_p05": 0.027451,
+      "luminance_p95": 0.470588,
+      "dynamic_range_p95_p05": 0.443137,
+      "dark_area_ratio": 0.821372,
+      "bright_area_ratio": 0.008567,
+      "highlight_area_ratio": 0.00443,
+      "local_contrast_mean": 0.041059,
+      "spatial_layering_std": 0.057111,
+      "luminance_entropy": 0.807194,
+      "warm_pixel_ratio": 0.09926,
+      "warmth_index": -0.023522,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.280083,
+        0.609148
+      ],
+      "grid_luminance": [
+        0.095861,
+        0.126302,
+        0.101312,
+        0.150601,
+        0.119084,
+        0.213653,
+        0.105405,
+        0.140891,
+        0.220278,
+        0.289896,
+        0.2233,
+        0.136901,
+        0.083708,
+        0.188889,
+        0.14278,
+        0.092619
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": 0.028226,
+      "dark_area_ratio": -0.018413,
+      "warm_pixel_ratio": 0.04756,
+      "warmth_index": 0.043736,
+      "local_contrast_mean": 0.022433,
+      "spatial_layering_std": 0.013719
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.046736,
+        "neutral": 0.025597,
+        "soft": 0.497908,
+        "indirect": 0.185286,
+        "layered": 0.204197,
+        "bright": 0.021856
+      },
+      "direction_checks": {
+        "neutral": false,
+        "brighter": true,
+        "less_dark": true,
+        "layering_preserved": true
+      },
+      "direction_hit_rate": 0.75
+    },
+    "object_preservation": {
+      "source_classes": [
+        "book",
+        "chair",
+        "laptop",
+        "potted plant"
+      ],
+      "result_classes": [
+        "book",
+        "chair",
+        "laptop",
+        "potted plant"
+      ],
+      "class_jaccard": 1.0,
+      "source_relevant_count": 7,
+      "result_relevant_count": 7
+    },
+    "structure_preservation": {
+      "source_keypoints": 2109,
+      "result_keypoints": 2404,
+      "good_matches": 722,
+      "match_ratio": 0.342342,
+      "homography_inlier_ratio": 0.987535,
+      "dhash_distance_from_input": 7
+    },
+    "process": {
+      "evidence_count": 7,
+      "trace_role_count": 0,
+      "source_locatable": true
+    }
+  },
+  {
+    "run_id": "T02-evidence_pipeline-r01",
+    "task_id": "T02",
+    "method": "evidence_pipeline",
+    "repeat": 1,
+    "result_path": "analysis/approach-comparison/images/bedroom/evidence-pipeline-r01.png",
+    "lighting": {
+      "image_id": "bedroom/evidence-pipeline-r01.png",
+      "room": "bedroom",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/bedroom/evidence-pipeline-r01.png",
+      "width": 1024,
+      "height": 1536,
+      "mean_luminance": 0.162276,
+      "luminance_std": 0.138626,
+      "luminance_p05": 0.043137,
+      "luminance_p95": 0.431373,
+      "dynamic_range_p95_p05": 0.388235,
+      "dark_area_ratio": 0.67695,
+      "bright_area_ratio": 0.001909,
+      "highlight_area_ratio": 0.001287,
+      "local_contrast_mean": 0.032194,
+      "spatial_layering_std": 0.07549,
+      "luminance_entropy": 0.783488,
+      "warm_pixel_ratio": 0.322807,
+      "warmth_index": 0.085036,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.126543,
+        0.381085
+      ],
+      "grid_luminance": [
+        0.066875,
+        0.067382,
+        0.053588,
+        0.058123,
+        0.168836,
+        0.150733,
+        0.145505,
+        0.089558,
+        0.153409,
+        0.221272,
+        0.265196,
+        0.207123,
+        0.174141,
+        0.245336,
+        0.248914,
+        0.280425
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": -0.022171,
+      "dark_area_ratio": 0.017691,
+      "warm_pixel_ratio": -0.003155,
+      "warmth_index": 0.050567,
+      "local_contrast_mean": 0.004931,
+      "spatial_layering_std": -0.029539
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.988615,
+        "neutral": 0.007394,
+        "soft": 0.87092,
+        "indirect": 0.820954,
+        "layered": 0.534458,
+        "bright": 4e-06
+      },
+      "direction_checks": {
+        "warm": true,
+        "soft": true,
+        "indirect": true,
+        "low_brightness": true
+      },
+      "direction_hit_rate": 1.0
+    },
+    "object_preservation": {
+      "source_classes": [
+        "bed"
+      ],
+      "result_classes": [
+        "bed"
+      ],
+      "class_jaccard": 1.0,
+      "source_relevant_count": 1,
+      "result_relevant_count": 1
+    },
+    "structure_preservation": {
+      "source_keypoints": 2500,
+      "result_keypoints": 2496,
+      "good_matches": 1080,
+      "match_ratio": 0.432692,
+      "homography_inlier_ratio": 0.993519,
+      "dhash_distance_from_input": 6
+    },
+    "process": {
+      "evidence_count": 7,
+      "trace_role_count": 0,
+      "source_locatable": true
+    }
+  },
+  {
+    "run_id": "T02-evidence_pipeline-r02",
+    "task_id": "T02",
+    "method": "evidence_pipeline",
+    "repeat": 2,
+    "result_path": "analysis/approach-comparison/images/bedroom/evidence-pipeline-r02.png",
+    "lighting": {
+      "image_id": "bedroom/evidence-pipeline-r02.png",
+      "room": "bedroom",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/bedroom/evidence-pipeline-r02.png",
+      "width": 1024,
+      "height": 1536,
+      "mean_luminance": 0.158712,
+      "luminance_std": 0.137585,
+      "luminance_p05": 0.039216,
+      "luminance_p95": 0.419608,
+      "dynamic_range_p95_p05": 0.380392,
+      "dark_area_ratio": 0.682842,
+      "bright_area_ratio": 0.002797,
+      "highlight_area_ratio": 0.002054,
+      "local_contrast_mean": 0.032615,
+      "spatial_layering_std": 0.069383,
+      "luminance_entropy": 0.786332,
+      "warm_pixel_ratio": 0.316912,
+      "warmth_index": 0.091372,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.126017,
+        0.384186
+      ],
+      "grid_luminance": [
+        0.084914,
+        0.073022,
+        0.050907,
+        0.05232,
+        0.204726,
+        0.159676,
+        0.140972,
+        0.085014,
+        0.154069,
+        0.210777,
+        0.250294,
+        0.179618,
+        0.164918,
+        0.230186,
+        0.234369,
+        0.263604
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": -0.025735,
+      "dark_area_ratio": 0.023583,
+      "warm_pixel_ratio": -0.00905,
+      "warmth_index": 0.056903,
+      "local_contrast_mean": 0.005352,
+      "spatial_layering_std": -0.035646
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.98866,
+        "neutral": 0.006366,
+        "soft": 0.855516,
+        "indirect": 0.809618,
+        "layered": 0.61607,
+        "bright": 5e-06
+      },
+      "direction_checks": {
+        "warm": true,
+        "soft": true,
+        "indirect": true,
+        "low_brightness": true
+      },
+      "direction_hit_rate": 1.0
+    },
+    "object_preservation": {
+      "source_classes": [
+        "bed"
+      ],
+      "result_classes": [
+        "bed"
+      ],
+      "class_jaccard": 1.0,
+      "source_relevant_count": 1,
+      "result_relevant_count": 1
+    },
+    "structure_preservation": {
+      "source_keypoints": 2500,
+      "result_keypoints": 2494,
+      "good_matches": 990,
+      "match_ratio": 0.396953,
+      "homography_inlier_ratio": 0.985859,
+      "dhash_distance_from_input": 5
+    },
+    "process": {
+      "evidence_count": 7,
+      "trace_role_count": 0,
+      "source_locatable": true
+    }
+  },
+  {
+    "run_id": "T03-evidence_pipeline-r01",
+    "task_id": "T03",
+    "method": "evidence_pipeline",
+    "repeat": 1,
+    "result_path": "analysis/approach-comparison/images/living_room/evidence-pipeline-r01.png",
+    "lighting": {
+      "image_id": "living_room/evidence-pipeline-r01.png",
+      "room": "living_room",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/living_room/evidence-pipeline-r01.png",
+      "width": 1086,
+      "height": 1448,
+      "mean_luminance": 0.283257,
+      "luminance_std": 0.229534,
+      "luminance_p05": 0.023529,
+      "luminance_p95": 0.741176,
+      "dynamic_range_p95_p05": 0.717647,
+      "dark_area_ratio": 0.437837,
+      "bright_area_ratio": 0.034787,
+      "highlight_area_ratio": 0.015158,
+      "local_contrast_mean": 0.096337,
+      "spatial_layering_std": 0.108082,
+      "luminance_entropy": 0.933803,
+      "warm_pixel_ratio": 0.556739,
+      "warmth_index": 0.133617,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.398249,
+        0.340504
+      ],
+      "grid_luminance": [
+        0.341393,
+        0.33851,
+        0.155662,
+        0.197922,
+        0.421896,
+        0.443298,
+        0.113192,
+        0.15326,
+        0.261262,
+        0.411279,
+        0.31552,
+        0.250983,
+        0.423708,
+        0.225205,
+        0.340737,
+        0.138687
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": 0.057249,
+      "dark_area_ratio": -0.115233,
+      "warm_pixel_ratio": 0.337184,
+      "warmth_index": 0.088595,
+      "local_contrast_mean": 0.038354,
+      "spatial_layering_std": 0.000538
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.779465,
+        "neutral": 0.189063,
+        "soft": 0.718812,
+        "indirect": 0.825091,
+        "layered": 0.849312,
+        "bright": 0.404428
+      },
+      "direction_checks": {
+        "warm": true,
+        "soft": true,
+        "layered": true,
+        "not_darker": true
+      },
+      "direction_hit_rate": 1.0
+    },
+    "object_preservation": {
+      "source_classes": [
+        "book",
+        "chair",
+        "couch",
+        "vase"
+      ],
+      "result_classes": [
+        "book",
+        "couch",
+        "vase"
+      ],
+      "class_jaccard": 0.75,
+      "source_relevant_count": 5,
+      "result_relevant_count": 6
+    },
+    "structure_preservation": {
+      "source_keypoints": 2500,
+      "result_keypoints": 2500,
+      "good_matches": 767,
+      "match_ratio": 0.3068,
+      "homography_inlier_ratio": 0.940026,
+      "dhash_distance_from_input": 9
+    },
+    "process": {
+      "evidence_count": 7,
+      "trace_role_count": 0,
+      "source_locatable": true
+    }
+  },
+  {
+    "run_id": "T03-evidence_pipeline-r02",
+    "task_id": "T03",
+    "method": "evidence_pipeline",
+    "repeat": 2,
+    "result_path": "analysis/approach-comparison/images/living_room/evidence-pipeline-r02.png",
+    "lighting": {
+      "image_id": "living_room/evidence-pipeline-r02.png",
+      "room": "living_room",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/living_room/evidence-pipeline-r02.png",
+      "width": 1086,
+      "height": 1448,
+      "mean_luminance": 0.284368,
+      "luminance_std": 0.224992,
+      "luminance_p05": 0.023529,
+      "luminance_p95": 0.72549,
+      "dynamic_range_p95_p05": 0.701961,
+      "dark_area_ratio": 0.436236,
+      "bright_area_ratio": 0.02663,
+      "highlight_area_ratio": 0.009716,
+      "local_contrast_mean": 0.092748,
+      "spatial_layering_std": 0.106717,
+      "luminance_entropy": 0.935677,
+      "warm_pixel_ratio": 0.552326,
+      "warmth_index": 0.12793,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.401251,
+        0.323478
+      ],
+      "grid_luminance": [
+        0.330675,
+        0.318601,
+        0.147003,
+        0.189026,
+        0.410464,
+        0.414754,
+        0.113327,
+        0.15339,
+        0.259396,
+        0.389951,
+        0.321794,
+        0.252993,
+        0.461941,
+        0.245512,
+        0.380494,
+        0.161123
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": 0.05836,
+      "dark_area_ratio": -0.116834,
+      "warm_pixel_ratio": 0.332771,
+      "warmth_index": 0.082908,
+      "local_contrast_mean": 0.034765,
+      "spatial_layering_std": -0.000827
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.716325,
+        "neutral": 0.245924,
+        "soft": 0.753055,
+        "indirect": 0.810327,
+        "layered": 0.808739,
+        "bright": 0.332111
+      },
+      "direction_checks": {
+        "warm": true,
+        "soft": true,
+        "layered": true,
+        "not_darker": true
+      },
+      "direction_hit_rate": 1.0
+    },
+    "object_preservation": {
+      "source_classes": [
+        "book",
+        "chair",
+        "couch",
+        "vase"
+      ],
+      "result_classes": [
+        "book",
+        "couch",
+        "vase"
+      ],
+      "class_jaccard": 0.75,
+      "source_relevant_count": 5,
+      "result_relevant_count": 6
+    },
+    "structure_preservation": {
+      "source_keypoints": 2500,
+      "result_keypoints": 2500,
+      "good_matches": 871,
+      "match_ratio": 0.3484,
+      "homography_inlier_ratio": 0.969001,
+      "dhash_distance_from_input": 3
+    },
+    "process": {
+      "evidence_count": 7,
+      "trace_role_count": 0,
+      "source_locatable": true
+    }
+  },
+  {
+    "run_id": "T01-direct_multi_agent-r01",
+    "task_id": "T01",
+    "method": "direct_multi_agent",
+    "repeat": 1,
+    "result_path": "analysis/approach-comparison/images/study/direct-multi-agent-r01.png",
+    "lighting": {
+      "image_id": "study/direct-multi-agent-r01.png",
+      "room": "study",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/study/direct-multi-agent-r01.png",
+      "width": 1536,
+      "height": 1024,
+      "mean_luminance": 0.180533,
+      "luminance_std": 0.165965,
+      "luminance_p05": 0.027451,
+      "luminance_p95": 0.560784,
+      "dynamic_range_p95_p05": 0.533333,
+      "dark_area_ratio": 0.71327,
+      "bright_area_ratio": 0.014207,
+      "highlight_area_ratio": 0.006464,
+      "local_contrast_mean": 0.046786,
+      "spatial_layering_std": 0.067104,
+      "luminance_entropy": 0.843821,
+      "warm_pixel_ratio": 0.123727,
+      "warmth_index": -0.031629,
+      "bright_region_count": 1,
+      "bright_region_concentration": 1.0,
+      "highlight_center_normalized": [
+        0.325277,
+        0.640304
+      ],
+      "grid_luminance": [
+        0.098712,
+        0.148845,
+        0.143315,
+        0.186302,
+        0.132136,
+        0.24748,
+        0.146237,
+        0.169041,
+        0.255889,
+        0.337476,
+        0.282605,
+        0.165895,
+        0.093478,
+        0.208697,
+        0.164086,
+        0.108335
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": 0.056791,
+      "dark_area_ratio": -0.126515,
+      "warm_pixel_ratio": 0.072027,
+      "warmth_index": 0.035629,
+      "local_contrast_mean": 0.02816,
+      "spatial_layering_std": 0.023712
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.023893,
+        "neutral": 0.025744,
+        "soft": 0.473034,
+        "indirect": 0.148204,
+        "layered": 0.201532,
+        "bright": 0.045655
+      },
+      "direction_checks": {
+        "neutral": false,
+        "brighter": true,
+        "less_dark": true,
+        "layering_preserved": true
+      },
+      "direction_hit_rate": 0.75
+    },
+    "object_preservation": {
+      "source_classes": [
+        "book",
+        "chair",
+        "laptop",
+        "potted plant"
+      ],
+      "result_classes": [
+        "book",
+        "chair",
+        "laptop",
+        "potted plant"
+      ],
+      "class_jaccard": 1.0,
+      "source_relevant_count": 7,
+      "result_relevant_count": 7
+    },
+    "structure_preservation": {
+      "source_keypoints": 2109,
+      "result_keypoints": 2470,
+      "good_matches": 730,
+      "match_ratio": 0.346136,
+      "homography_inlier_ratio": 0.975342,
+      "dhash_distance_from_input": 7
+    },
+    "process": {
+      "evidence_count": 0,
+      "trace_role_count": 3,
+      "source_locatable": null
+    }
+  },
+  {
+    "run_id": "T01-direct_multi_agent-r02",
+    "task_id": "T01",
+    "method": "direct_multi_agent",
+    "repeat": 2,
+    "result_path": "analysis/approach-comparison/images/study/direct-multi-agent-r02.png",
+    "lighting": {
+      "image_id": "study/direct-multi-agent-r02.png",
+      "room": "study",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/study/direct-multi-agent-r02.png",
+      "width": 1536,
+      "height": 1024,
+      "mean_luminance": 0.18021,
+      "luminance_std": 0.153776,
+      "luminance_p05": 0.035294,
+      "luminance_p95": 0.509804,
+      "dynamic_range_p95_p05": 0.47451,
+      "dark_area_ratio": 0.710203,
+      "bright_area_ratio": 0.009916,
+      "highlight_area_ratio": 0.004779,
+      "local_contrast_mean": 0.04378,
+      "spatial_layering_std": 0.058881,
+      "luminance_entropy": 0.84002,
+      "warm_pixel_ratio": 0.125982,
+      "warmth_index": -0.0256,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.289184,
+        0.611392
+      ],
+      "grid_luminance": [
+        0.108527,
+        0.154444,
+        0.16454,
+        0.21474,
+        0.134548,
+        0.239517,
+        0.149604,
+        0.166752,
+        0.234766,
+        0.315035,
+        0.264313,
+        0.155601,
+        0.101323,
+        0.207605,
+        0.166018,
+        0.106034
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": 0.056468,
+      "dark_area_ratio": -0.129582,
+      "warm_pixel_ratio": 0.074282,
+      "warmth_index": 0.041658,
+      "local_contrast_mean": 0.025154,
+      "spatial_layering_std": 0.015489
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.044842,
+        "neutral": 0.034094,
+        "soft": 0.539274,
+        "indirect": 0.215674,
+        "layered": 0.268814,
+        "bright": 0.041839
+      },
+      "direction_checks": {
+        "neutral": false,
+        "brighter": true,
+        "less_dark": true,
+        "layering_preserved": true
+      },
+      "direction_hit_rate": 0.75
+    },
+    "object_preservation": {
+      "source_classes": [
+        "book",
+        "chair",
+        "laptop",
+        "potted plant"
+      ],
+      "result_classes": [
+        "book",
+        "chair",
+        "laptop",
+        "potted plant"
+      ],
+      "class_jaccard": 1.0,
+      "source_relevant_count": 7,
+      "result_relevant_count": 7
+    },
+    "structure_preservation": {
+      "source_keypoints": 2109,
+      "result_keypoints": 2412,
+      "good_matches": 763,
+      "match_ratio": 0.361783,
+      "homography_inlier_ratio": 0.984273,
+      "dhash_distance_from_input": 8
+    },
+    "process": {
+      "evidence_count": 0,
+      "trace_role_count": 3,
+      "source_locatable": null
+    }
+  },
+  {
+    "run_id": "T02-direct_multi_agent-r01",
+    "task_id": "T02",
+    "method": "direct_multi_agent",
+    "repeat": 1,
+    "result_path": "analysis/approach-comparison/images/bedroom/direct-multi-agent-r01.png",
+    "lighting": {
+      "image_id": "bedroom/direct-multi-agent-r01.png",
+      "room": "bedroom",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/bedroom/direct-multi-agent-r01.png",
+      "width": 1024,
+      "height": 1536,
+      "mean_luminance": 0.204234,
+      "luminance_std": 0.152561,
+      "luminance_p05": 0.062745,
+      "luminance_p95": 0.494118,
+      "dynamic_range_p95_p05": 0.431373,
+      "dark_area_ratio": 0.618149,
+      "bright_area_ratio": 0.003172,
+      "highlight_area_ratio": 0.002162,
+      "local_contrast_mean": 0.034296,
+      "spatial_layering_std": 0.076053,
+      "luminance_entropy": 0.816584,
+      "warm_pixel_ratio": 0.381584,
+      "warmth_index": 0.098775,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.126506,
+        0.383559
+      ],
+      "grid_luminance": [
+        0.1341,
+        0.126503,
+        0.092453,
+        0.076896,
+        0.245989,
+        0.219384,
+        0.185388,
+        0.106222,
+        0.199895,
+        0.276536,
+        0.309296,
+        0.195223,
+        0.216679,
+        0.295547,
+        0.297703,
+        0.289933
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": 0.019787,
+      "dark_area_ratio": -0.04111,
+      "warm_pixel_ratio": 0.055622,
+      "warmth_index": 0.064306,
+      "local_contrast_mean": 0.007033,
+      "spatial_layering_std": -0.028976
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.989826,
+        "neutral": 0.007997,
+        "soft": 0.877652,
+        "indirect": 0.794176,
+        "layered": 0.566231,
+        "bright": 9e-06
+      },
+      "direction_checks": {
+        "warm": true,
+        "soft": true,
+        "indirect": true,
+        "low_brightness": true
+      },
+      "direction_hit_rate": 1.0
+    },
+    "object_preservation": {
+      "source_classes": [
+        "bed"
+      ],
+      "result_classes": [
+        "bed"
+      ],
+      "class_jaccard": 1.0,
+      "source_relevant_count": 1,
+      "result_relevant_count": 1
+    },
+    "structure_preservation": {
+      "source_keypoints": 2500,
+      "result_keypoints": 2500,
+      "good_matches": 1127,
+      "match_ratio": 0.4508,
+      "homography_inlier_ratio": 0.987578,
+      "dhash_distance_from_input": 4
+    },
+    "process": {
+      "evidence_count": 0,
+      "trace_role_count": 3,
+      "source_locatable": null
+    }
+  },
+  {
+    "run_id": "T02-direct_multi_agent-r02",
+    "task_id": "T02",
+    "method": "direct_multi_agent",
+    "repeat": 2,
+    "result_path": "analysis/approach-comparison/images/bedroom/direct-multi-agent-r02.png",
+    "lighting": {
+      "image_id": "bedroom/direct-multi-agent-r02.png",
+      "room": "bedroom",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/bedroom/direct-multi-agent-r02.png",
+      "width": 1024,
+      "height": 1536,
+      "mean_luminance": 0.199545,
+      "luminance_std": 0.149733,
+      "luminance_p05": 0.062745,
+      "luminance_p95": 0.498039,
+      "dynamic_range_p95_p05": 0.435294,
+      "dark_area_ratio": 0.632564,
+      "bright_area_ratio": 0.002687,
+      "highlight_area_ratio": 0.001768,
+      "local_contrast_mean": 0.033967,
+      "spatial_layering_std": 0.075739,
+      "luminance_entropy": 0.819356,
+      "warm_pixel_ratio": 0.367203,
+      "warmth_index": 0.08172,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.126451,
+        0.382861
+      ],
+      "grid_luminance": [
+        0.11502,
+        0.124997,
+        0.090136,
+        0.069946,
+        0.23093,
+        0.227484,
+        0.190844,
+        0.102596,
+        0.213027,
+        0.282483,
+        0.312923,
+        0.188085,
+        0.208339,
+        0.282334,
+        0.285824,
+        0.267754
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": 0.015098,
+      "dark_area_ratio": -0.026695,
+      "warm_pixel_ratio": 0.041241,
+      "warmth_index": 0.047251,
+      "local_contrast_mean": 0.006704,
+      "spatial_layering_std": -0.02929
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.988335,
+        "neutral": 0.008091,
+        "soft": 0.867463,
+        "indirect": 0.803584,
+        "layered": 0.58112,
+        "bright": 1.3e-05
+      },
+      "direction_checks": {
+        "warm": true,
+        "soft": true,
+        "indirect": true,
+        "low_brightness": true
+      },
+      "direction_hit_rate": 1.0
+    },
+    "object_preservation": {
+      "source_classes": [
+        "bed"
+      ],
+      "result_classes": [
+        "bed"
+      ],
+      "class_jaccard": 1.0,
+      "source_relevant_count": 1,
+      "result_relevant_count": 1
+    },
+    "structure_preservation": {
+      "source_keypoints": 2500,
+      "result_keypoints": 2500,
+      "good_matches": 1028,
+      "match_ratio": 0.4112,
+      "homography_inlier_ratio": 0.986381,
+      "dhash_distance_from_input": 8
+    },
+    "process": {
+      "evidence_count": 0,
+      "trace_role_count": 3,
+      "source_locatable": null
+    }
+  },
+  {
+    "run_id": "T03-direct_multi_agent-r01",
+    "task_id": "T03",
+    "method": "direct_multi_agent",
+    "repeat": 1,
+    "result_path": "analysis/approach-comparison/images/living_room/direct-multi-agent-r01.png",
+    "lighting": {
+      "image_id": "living_room/direct-multi-agent-r01.png",
+      "room": "living_room",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/living_room/direct-multi-agent-r01.png",
+      "width": 1086,
+      "height": 1448,
+      "mean_luminance": 0.264059,
+      "luminance_std": 0.210279,
+      "luminance_p05": 0.015686,
+      "luminance_p95": 0.67451,
+      "dynamic_range_p95_p05": 0.658824,
+      "dark_area_ratio": 0.451264,
+      "bright_area_ratio": 0.020007,
+      "highlight_area_ratio": 0.005961,
+      "local_contrast_mean": 0.090166,
+      "spatial_layering_std": 0.097261,
+      "luminance_entropy": 0.926287,
+      "warm_pixel_ratio": 0.548258,
+      "warmth_index": 0.138338,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.41108,
+        0.305243
+      ],
+      "grid_luminance": [
+        0.317219,
+        0.31709,
+        0.152412,
+        0.190908,
+        0.377734,
+        0.40433,
+        0.115481,
+        0.151674,
+        0.241008,
+        0.379771,
+        0.281019,
+        0.21371,
+        0.404722,
+        0.212803,
+        0.331412,
+        0.134044
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": 0.038051,
+      "dark_area_ratio": -0.101806,
+      "warm_pixel_ratio": 0.328703,
+      "warmth_index": 0.093316,
+      "local_contrast_mean": 0.032183,
+      "spatial_layering_std": -0.010283
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.810169,
+        "neutral": 0.153187,
+        "soft": 0.74998,
+        "indirect": 0.836539,
+        "layered": 0.842684,
+        "bright": 0.28423
+      },
+      "direction_checks": {
+        "warm": true,
+        "soft": true,
+        "layered": true,
+        "not_darker": true
+      },
+      "direction_hit_rate": 1.0
+    },
+    "object_preservation": {
+      "source_classes": [
+        "book",
+        "chair",
+        "couch",
+        "vase"
+      ],
+      "result_classes": [
+        "book",
+        "couch",
+        "vase"
+      ],
+      "class_jaccard": 0.75,
+      "source_relevant_count": 5,
+      "result_relevant_count": 5
+    },
+    "structure_preservation": {
+      "source_keypoints": 2500,
+      "result_keypoints": 2500,
+      "good_matches": 717,
+      "match_ratio": 0.2868,
+      "homography_inlier_ratio": 0.940028,
+      "dhash_distance_from_input": 8
+    },
+    "process": {
+      "evidence_count": 0,
+      "trace_role_count": 3,
+      "source_locatable": null
+    }
+  },
+  {
+    "run_id": "T03-direct_multi_agent-r02",
+    "task_id": "T03",
+    "method": "direct_multi_agent",
+    "repeat": 2,
+    "result_path": "analysis/approach-comparison/images/living_room/direct-multi-agent-r02.png",
+    "lighting": {
+      "image_id": "living_room/direct-multi-agent-r02.png",
+      "room": "living_room",
+      "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/approach-comparison/images/living_room/direct-multi-agent-r02.png",
+      "width": 1086,
+      "height": 1448,
+      "mean_luminance": 0.257329,
+      "luminance_std": 0.215393,
+      "luminance_p05": 0.019608,
+      "luminance_p95": 0.694118,
+      "dynamic_range_p95_p05": 0.67451,
+      "dark_area_ratio": 0.468514,
+      "bright_area_ratio": 0.024128,
+      "highlight_area_ratio": 0.008151,
+      "local_contrast_mean": 0.090372,
+      "spatial_layering_std": 0.099974,
+      "luminance_entropy": 0.920327,
+      "warm_pixel_ratio": 0.529488,
+      "warmth_index": 0.130584,
+      "bright_region_count": 0,
+      "bright_region_concentration": 0.0,
+      "highlight_center_normalized": [
+        0.388399,
+        0.33708
+      ],
+      "grid_luminance": [
+        0.293297,
+        0.302176,
+        0.142585,
+        0.172667,
+        0.385567,
+        0.394606,
+        0.104052,
+        0.14312,
+        0.214608,
+        0.379531,
+        0.284004,
+        0.217842,
+        0.41237,
+        0.210194,
+        0.32465,
+        0.136376
+      ]
+    },
+    "lighting_delta": {
+      "mean_luminance": 0.031321,
+      "dark_area_ratio": -0.084556,
+      "warm_pixel_ratio": 0.309933,
+      "warmth_index": 0.085562,
+      "local_contrast_mean": 0.032389,
+      "spatial_layering_std": -0.00757
+    },
+    "targets": {
+      "openclip_scores": {
+        "warm": 0.787237,
+        "neutral": 0.161044,
+        "soft": 0.693818,
+        "indirect": 0.863663,
+        "layered": 0.821071,
+        "bright": 0.149749
+      },
+      "direction_checks": {
+        "warm": true,
+        "soft": true,
+        "layered": true,
+        "not_darker": true
+      },
+      "direction_hit_rate": 1.0
+    },
+    "object_preservation": {
+      "source_classes": [
+        "book",
+        "chair",
+        "couch",
+        "vase"
+      ],
+      "result_classes": [
+        "book",
+        "couch",
+        "vase"
+      ],
+      "class_jaccard": 0.75,
+      "source_relevant_count": 5,
+      "result_relevant_count": 5
+    },
+    "structure_preservation": {
+      "source_keypoints": 2500,
+      "result_keypoints": 2500,
+      "good_matches": 636,
+      "match_ratio": 0.2544,
+      "homography_inlier_ratio": 0.948113,
+      "dhash_distance_from_input": 7
+    },
+    "process": {
+      "evidence_count": 0,
+      "trace_role_count": 3,
+      "source_locatable": null
+    }
+  }
+]

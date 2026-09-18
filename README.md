@@ -9,6 +9,7 @@
 - 设计方案：以“自然渐进式柔光系统”为主题，将舒适基础光、睡前暖光和夜起路径光组织为连续体验。
 - 方法资料：项目推进方案、智能照明抽取提示词和美学指标体系。
 - 交互工具：可切换 Legacy / v2 口径，并展示视觉 baseline 与受控生图实验的静态 Web 仪表盘。
+- 方法对照：使用 3 张全新留出底图，对比“项目证据流程”和“直接多 Agent”在相同生图后端下的建议、生成结果、稳定性与可追溯性。
 
 最终汇报见 [`deliverables/natural-progressive-soft-light-system.pptx`](deliverables/natural-progressive-soft-light-system.pptx)，核心统计见 [`analysis/kano-pair-statistics.xlsx`](analysis/kano-pair-statistics.xlsx)。
 
@@ -71,6 +72,13 @@ python -m http.server 8000
 ```
 
 浏览器访问 `http://localhost:8000/web/`。详细说明见 [`web/README.md`](web/README.md)。
+
+对照试验的冻结协议、12 张生成图、自动指标和盲评表见 [`analysis/approach-comparison/README.md`](analysis/approach-comparison/README.md)。重建结构化清单与报告：
+
+```bash
+python scripts/prepare_approach_comparison.py
+python scripts/build_approach_comparison_report.py
+```
 
 ## 文档索引
 

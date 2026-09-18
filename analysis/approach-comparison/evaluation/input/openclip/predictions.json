@@ -1,0 +1,146 @@
+[
+  {
+    "image_id": "bedroom/bedroom_heldout_01_pexels_36639777.jpg",
+    "room": "bedroom",
+    "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/data/evaluation/heldout-images/bedroom/bedroom_heldout_01_pexels_36639777.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.927199,
+        "scores": {
+          "暖色照明": 0.927199,
+          "中性色照明": 0.041334,
+          "冷色照明": 0.031467
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.753702,
+        "scores": {
+          "柔和漫射": 0.753702,
+          "硬朗定向": 0.246298
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.727483,
+        "scores": {
+          "间接照明": 0.727483,
+          "直接照明": 0.272517
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.593606,
+        "scores": {
+          "层次丰富": 0.406394,
+          "均匀平坦": 0.593606
+        }
+      },
+      "明暗氛围": {
+        "label": "昏暗氛围",
+        "confidence": 0.999994,
+        "scores": {
+          "明亮通透": 6e-06,
+          "昏暗氛围": 0.999994
+        }
+      }
+    }
+  },
+  {
+    "image_id": "living_room/living_heldout_01_pexels_31751141.jpg",
+    "room": "living_room",
+    "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/data/evaluation/heldout-images/living_room/living_heldout_01_pexels_31751141.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.49212,
+        "scores": {
+          "暖色照明": 0.49212,
+          "中性色照明": 0.294164,
+          "冷色照明": 0.213716
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.56243,
+        "scores": {
+          "柔和漫射": 0.56243,
+          "硬朗定向": 0.43757
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.852124,
+        "scores": {
+          "间接照明": 0.852124,
+          "直接照明": 0.147876
+        }
+      },
+      "光照层次": {
+        "label": "层次丰富",
+        "confidence": 0.690944,
+        "scores": {
+          "层次丰富": 0.690944,
+          "均匀平坦": 0.309055
+        }
+      },
+      "明暗氛围": {
+        "label": "昏暗氛围",
+        "confidence": 0.901281,
+        "scores": {
+          "明亮通透": 0.098719,
+          "昏暗氛围": 0.901281
+        }
+      }
+    }
+  },
+  {
+    "image_id": "study/study_heldout_01_pexels_7014764.jpg",
+    "room": "study",
+    "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/data/evaluation/heldout-images/study/study_heldout_01_pexels_7014764.jpg",
+    "attributes": {
+      "色温感知": {
+        "label": "冷色照明",
+        "confidence": 0.975948,
+        "scores": {
+          "暖色照明": 0.010617,
+          "中性色照明": 0.013435,
+          "冷色照明": 0.975948
+        }
+      },
+      "光线柔和度": {
+        "label": "硬朗定向",
+        "confidence": 0.518854,
+        "scores": {
+          "柔和漫射": 0.481146,
+          "硬朗定向": 0.518854
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.8442,
+        "scores": {
+          "间接照明": 0.1558,
+          "直接照明": 0.8442
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.810554,
+        "scores": {
+          "层次丰富": 0.189446,
+          "均匀平坦": 0.810554
+        }
+      },
+      "明暗氛围": {
+        "label": "昏暗氛围",
+        "confidence": 0.991303,
+        "scores": {
+          "明亮通透": 0.008697,
+          "昏暗氛围": 0.991303
+        }
+      }
+    }
+  }
+]

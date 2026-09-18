@@ -1,0 +1,74 @@
+[
+  {
+    "sample_alias": "S01",
+    "run_id": "T03-direct_multi_agent-r02",
+    "method": "direct_multi_agent",
+    "task_id": "T03"
+  },
+  {
+    "sample_alias": "S02",
+    "run_id": "T01-direct_multi_agent-r01",
+    "method": "direct_multi_agent",
+    "task_id": "T01"
+  },
+  {
+    "sample_alias": "S03",
+    "run_id": "T01-evidence_pipeline-r01",
+    "method": "evidence_pipeline",
+    "task_id": "T01"
+  },
+  {
+    "sample_alias": "S04",
+    "run_id": "T02-direct_multi_agent-r01",
+    "method": "direct_multi_agent",
+    "task_id": "T02"
+  },
+  {
+    "sample_alias": "S05",
+    "run_id": "T03-evidence_pipeline-r01",
+    "method": "evidence_pipeline",
+    "task_id": "T03"
+  },
+  {
+    "sample_alias": "S06",
+    "run_id": "T01-direct_multi_agent-r02",
+    "method": "direct_multi_agent",
+    "task_id": "T01"
+  },
+  {
+    "sample_alias": "S07",
+    "run_id": "T02-evidence_pipeline-r02",
+    "method": "evidence_pipeline",
+    "task_id": "T02"
+  },
+  {
+    "sample_alias": "S08",
+    "run_id": "T02-direct_multi_agent-r02",
+    "method": "direct_multi_agent",
+    "task_id": "T02"
+  },
+  {
+    "sample_alias": "S09",
+    "run_id": "T02-evidence_pipeline-r01",
+    "method": "evidence_pipeline",
+    "task_id": "T02"
+  },
+  {
+    "sample_alias": "S10",
+    "run_id": "T03-evidence_pipeline-r02",
+    "method": "evidence_pipeline",
+    "task_id": "T03"
+  },
+  {
+    "sample_alias": "S11",
+    "run_id": "T01-evidence_pipeline-r02",
+    "method": "evidence_pipeline",
+    "task_id": "T01"
+  },
+  {
+    "sample_alias": "S12",
+    "run_id": "T03-direct_multi_agent-r01",
+    "method": "direct_multi_agent",
+    "task_id": "T03"
+  }
+]

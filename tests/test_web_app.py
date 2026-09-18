@@ -33,9 +33,9 @@ class WebAppTests(unittest.TestCase):
 
     def test_required_sections_and_mount_points_exist(self) -> None:
         required = {
-            'overview', 'comparison', 'vision', 'generation', 'kpi-grid',
+            'overview', 'comparison', 'vision', 'generation', 'approach', 'kpi-grid',
             'scene-select', 'priority-bars', 'touchpoint-body',
-            'comparison-body', 'vision-kpis', 'experiment-grid',
+            'comparison-body', 'vision-kpis', 'experiment-grid', 'approach-kpis', 'approach-body',
         }
         self.assertTrue(required.issubset(self.parser.ids))
 
@@ -52,6 +52,7 @@ class WebAppTests(unittest.TestCase):
             '../analysis/lighting-baseline/summary.json',
             '../analysis/openclip-baseline/summary.json',
             '../analysis/controlled-generation/experiment.json',
+            '../analysis/approach-comparison/evaluation/summary.json',
         }
         for path in expected:
             self.assertIn(path, self.script)

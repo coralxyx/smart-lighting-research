@@ -3,7 +3,8 @@ const paths = {
   yolo: '../analysis/yolo-baseline/summary.json',
   lighting: '../analysis/lighting-baseline/summary.json',
   openclip: '../analysis/openclip-baseline/summary.json',
-  experiments: '../analysis/controlled-generation/experiment.json'
+  experiments: '../analysis/controlled-generation/experiment.json',
+  approach: '../analysis/approach-comparison/evaluation/summary.json'
 };
 
 const state = { mode: 'legacy', scene: '全部场景', data: null };
@@ -44,9 +45,13 @@ function setupNavigation() {
       document.querySelectorAll('.page-section').forEach(function(item) { item.classList.remove('active'); });
       button.classList.add('active');
       document.getElementById(button.dataset.target).classList.add('active');
+      window.history.replaceState(null, '', '#' + button.dataset.target);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
+  const initial = window.location.hash.slice(1);
+  const initialButton = document.querySelector('.nav-button[data-target=' + initial + ']');
+  if (initialButton) initialButton.click();
 }
 
 function setupFilters() {
@@ -289,6 +294,37 @@ function renderExperiments() {
   });
 }
 
+function renderApproach() {
+  const summary = state.data.approach;
+  const evidence = summary.method_summary.evidence_pipeline;
+  const direct = summary.method_summary.direct_multi_agent;
+  const target = document.getElementById('approach-kpis');
+  target.append(
+    kpi('全新留出场景', number(summary.experiment_size.tasks), '书房 / 卧室 / 客厅'),
+    kpi('生成结果', number(summary.experiment_size.outputs), '2 方法 × 2 次重复'),
+    kpi('证据流程命中', percent(evidence.mean_direction_hit_rate), '冻结目标方向'),
+    kpi('多 Agent 命中', percent(direct.mean_direction_hit_rate), '冻结目标方向'),
+    kpi('可定位证据', percent(evidence.locatable_evidence_rate), '过程质量，不混入盲评')
+  );
+  const body = document.getElementById('approach-body');
+  [
+    ['项目证据流程', evidence],
+    ['直接多 Agent', direct]
+  ].forEach(function(item) {
+    const row = item[1];
+    const tr = element('tr');
+    tr.append(
+      element('td', '', item[0]),
+      element('td', '', percent(row.mean_direction_hit_rate)),
+      element('td', '', row.mean_yolo_class_jaccard.toFixed(3)),
+      element('td', '', row.mean_orb_match_ratio.toFixed(3)),
+      element('td', '', row.mean_homography_inlier_ratio.toFixed(3)),
+      element('td', '', row.mean_evidence_count.toFixed(1))
+    );
+    body.append(tr);
+  });
+}
+
 function metricBox(label, value) {
   const box = element('div');
   box.append(element('span', '', label), element('strong', '', value));
@@ -303,13 +339,14 @@ async function loadData() {
         return response.json();
       });
     }));
-    state.data = { dashboard: values[0], yolo: values[1], lighting: values[2], openclip: values[3], experiments: values[4] };
+    state.data = { dashboard: values[0], yolo: values[1], lighting: values[2], openclip: values[3], experiments: values[4], approach: values[5] };
     setupFilters();
     renderProjectKpis();
     renderOverview();
     renderComparison();
     renderVision();
     renderExperiments();
+    renderApproach();
     document.getElementById('data-version').textContent = '数据契约 v' + state.data.dashboard.metadata.schema_version;
   } catch (error) {
     const banner = document.getElementById('error-banner');

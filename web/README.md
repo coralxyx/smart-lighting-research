@@ -24,6 +24,7 @@ http://localhost:8000/web/
 - 稳健性对照：分类变化与 Bootstrap 低稳定组合；
 - 视觉基线：YOLO、光照统计和 OpenCLIP 结果；
 - 灯光方案：三组受控生图实验及量化验收。
+- 方案对照：项目证据流程与直接多 Agent 的 3 场景、2 次重复无 API 对照试验。
 
 ## 数据来源
 
@@ -32,5 +33,6 @@ http://localhost:8000/web/
 - `analysis/lighting-baseline/summary.json`
 - `analysis/openclip-baseline/summary.json`
 - `analysis/controlled-generation/experiment.json`
+- `analysis/approach-comparison/evaluation/summary.json`
 
 界面不写入任何研究数据。重新运行上游脚本后，刷新页面即可看到更新结果。

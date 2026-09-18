@@ -18,6 +18,7 @@
       <button class='nav-button' data-target='comparison'>稳健性对照</button>
       <button class='nav-button' data-target='vision'>视觉基线</button>
       <button class='nav-button' data-target='generation'>灯光方案</button>
+      <button class='nav-button' data-target='approach'>方案对照</button>
     </nav>
     <div class='status'><span></span>可复现数据</div>
   </header>
@@ -90,6 +91,27 @@
       <figure class='experiment-overview'><img src='../analysis/controlled-generation/overview.jpg' alt='三组受控灯光生成实验总览'><figcaption>左列为原始底图，中列为 A 条件，右列为 B 条件。</figcaption></figure>
       <div id='experiment-grid' class='experiment-grid'></div>
       <aside class='boundary'><strong>结论边界</strong><p>这是设计方案生成，不是物理照明仿真。目标色温不是仪器实测值，局部几何与材质仍可能漂移。</p></aside>
+    </section>
+
+    <section id='approach' class='page-section'>
+      <div class='section-intro'><p class='eyebrow'>EVIDENCE PIPELINE VS DIRECT MULTI-AGENT</p><h1>Agent 会替代整套研究流程吗？</h1><p>同一批全新留出底图、同一生图后端、同一生成次数。直接多 Agent 只读取图片与 brief；项目流程额外使用 Kano-inspired、YOLO、光照与 OpenCLIP 证据。自动指标与过程证据分开呈现。</p></div>
+      <div id='approach-kpis' class='kpi-grid'></div>
+      <figure class='experiment-overview'><img src='../analysis/approach-comparison/overview.jpg' alt='证据流程与直接多 Agent 对照总览'><figcaption>每行一个留出场景：原图、证据流程两次重复、直接多 Agent 两次重复。</figcaption></figure>
+      <div class='dashboard-grid'>
+        <article class='panel span-7'>
+          <div class='panel-heading'><div><span>06</span><h2>自动指标对照</h2></div><p>输出质量代理，不含人工盲评</p></div>
+          <div class='table-wrap'><table><thead><tr><th>方法</th><th>目标命中</th><th>YOLO 保持</th><th>ORB 匹配</th><th>单应性内点</th><th>证据数</th></tr></thead><tbody id='approach-body'></tbody></table></div>
+        </article>
+        <article class='panel span-5'>
+          <div class='panel-heading'><div><span>07</span><h2>可解释结论</h2></div><p>答辩建议口径</p></div>
+          <div class='finding-list'>
+            <p><strong>视觉结果：</strong>当前自动指标下两组目标命中率接近，不能宣称项目流程在三张图上显著更美。</p>
+            <p><strong>流程价值：</strong>项目组每条建议都有可定位的 Kano 与视觉证据；直接多 Agent 的设计判断没有外部证据链。</p>
+            <p><strong>正确结论：</strong>Agent 适合组织观察与方案表达，项目流程负责让建议可追溯、可测量、可复核。</p>
+          </div>
+        </article>
+      </div>
+      <aside class='boundary'><strong>待人工验收</strong><p>盲评材料位于 analysis/approach-comparison/blind-review。完成至少 3 位评审后，再比较需求匹配、真实感与空间保持；本页不伪造主观评分。</p></aside>
     </section>
   </main>
 

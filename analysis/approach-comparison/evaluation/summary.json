@@ -1,0 +1,81 @@
+{
+  "experiment_size": {
+    "tasks": 3,
+    "methods": 2,
+    "repeats": 2,
+    "outputs": 12
+  },
+  "method_summary": {
+    "evidence_pipeline": {
+      "output_count": 6,
+      "mean_direction_hit_rate": 0.916667,
+      "mean_yolo_class_jaccard": 0.916667,
+      "mean_orb_match_ratio": 0.371625,
+      "mean_homography_inlier_ratio": 0.976379,
+      "mean_dhash_distance_from_input": 5.833333,
+      "mean_evidence_count": 7,
+      "locatable_evidence_rate": 1.0
+    },
+    "direct_multi_agent": {
+      "output_count": 6,
+      "mean_direction_hit_rate": 0.916667,
+      "mean_yolo_class_jaccard": 0.916667,
+      "mean_orb_match_ratio": 0.351853,
+      "mean_homography_inlier_ratio": 0.970286,
+      "mean_dhash_distance_from_input": 7,
+      "mean_evidence_count": 0,
+      "locatable_evidence_rate": 0.0
+    }
+  },
+  "repeat_stability": [
+    {
+      "task_id": "T01",
+      "method": "evidence_pipeline",
+      "direction_hit_rate_gap": 0.0,
+      "mean_luminance_gap": 0.002254,
+      "warmth_index_gap": 0.000321,
+      "repeat_dhash_distance": 6
+    },
+    {
+      "task_id": "T01",
+      "method": "direct_multi_agent",
+      "direction_hit_rate_gap": 0.0,
+      "mean_luminance_gap": 0.000323,
+      "warmth_index_gap": 0.006029,
+      "repeat_dhash_distance": 3
+    },
+    {
+      "task_id": "T02",
+      "method": "evidence_pipeline",
+      "direction_hit_rate_gap": 0.0,
+      "mean_luminance_gap": 0.003564,
+      "warmth_index_gap": 0.006336,
+      "repeat_dhash_distance": 5
+    },
+    {
+      "task_id": "T02",
+      "method": "direct_multi_agent",
+      "direction_hit_rate_gap": 0.0,
+      "mean_luminance_gap": 0.004689,
+      "warmth_index_gap": 0.017055,
+      "repeat_dhash_distance": 4
+    },
+    {
+      "task_id": "T03",
+      "method": "evidence_pipeline",
+      "direction_hit_rate_gap": 0.0,
+      "mean_luminance_gap": 0.001111,
+      "warmth_index_gap": 0.005687,
+      "repeat_dhash_distance": 8
+    },
+    {
+      "task_id": "T03",
+      "method": "direct_multi_agent",
+      "direction_hit_rate_gap": 0.0,
+      "mean_luminance_gap": 0.00673,
+      "warmth_index_gap": 0.007754,
+      "repeat_dhash_distance": 3
+    }
+  ],
+  "interpretation_guardrail": "小样本描述统计；人工盲评未完成前不宣布总体优胜，不进行显著性推断。"
+}

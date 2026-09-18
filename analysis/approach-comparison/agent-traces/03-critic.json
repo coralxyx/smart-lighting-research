@@ -1,0 +1,26 @@
+{
+  "role": "critic",
+  "input_scope": ["observer trace", "designer trace"],
+  "forbidden_inputs": ["Kano", "YOLO", "OpenCLIP", "lighting baseline", "parameter mapping"],
+  "reviews": [
+    {
+      "task_id": "T01",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": ["符合暗冷工作空间与桌面任务需求", "参数与空间保持字段完整", "无统计声明", "图片编辑仅限照明"]
+    },
+    {
+      "task_id": "T02",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": ["低色温、低亮度符合睡前场景", "兼顾床面基本可见度", "字段完整且无无依据统计声明"]
+    },
+    {
+      "task_id": "T03",
+      "verdict": "revise",
+      "issues": ["补充分路调光控制策略"],
+      "approved_control_strategy": "沙发区环境光与柜体层板灯分路调光，并设置低亮度休闲场景。",
+      "rationale": ["最小修订，不改变已冻结图片 prompt", "补全控制字段"]
+    }
+  ]
+}
