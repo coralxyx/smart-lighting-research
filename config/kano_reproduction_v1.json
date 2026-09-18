@@ -1,0 +1,18 @@
+{
+  "method_name": "legacy-kano-inspired-reproduction",
+  "method_version": "1.0.0",
+  "input_columns": {
+    "post_text": "原句 (未分句)",
+    "sentence": "分句 (模型输入)",
+    "scene": "使用场景分类",
+    "aesthetic": "标准美学指标分类",
+    "perception": "用户感受分类",
+    "sentiment": "情感强度"
+  },
+  "sentiment_labels": ["正向", "中性", "负向"],
+  "excluded_formal_scene": "无",
+  "minimum_scene_indicator_count": 5,
+  "classification_rule_status": "not recoverable from workbook formulas",
+  "classification_reproduction_strategy": "legacy scene-aesthetic mapping until an executable rule is confirmed",
+  "random_seed": 42
+}

@@ -1,0 +1,161 @@
+{
+  "input_path": "D:\\_0000上海交通大学\\prp\\smart-lighting-research\\data\\processed\\tagged-results-with-sentiment.xlsx",
+  "reference_path": "D:\\_0000上海交通大学\\prp\\smart-lighting-research\\analysis\\kano-pair-statistics.xlsx",
+  "aggregate_summary": {
+    "record_count": 4747,
+    "unique_post_count": 425,
+    "records_per_post": {
+      "minimum": 1,
+      "maximum": 51,
+      "median": 8.0
+    },
+    "scene_counts": [
+      {
+        "scene": "无",
+        "count": 2351
+      },
+      {
+        "scene": "日常基础照明",
+        "count": 1093
+      },
+      {
+        "scene": "睡眠与起居",
+        "count": 433
+      },
+      {
+        "scene": "学习工作",
+        "count": 312
+      },
+      {
+        "scene": "智能托管",
+        "count": 283
+      },
+      {
+        "scene": "休闲娱乐",
+        "count": 211
+      },
+      {
+        "scene": "亲子互动陪伴",
+        "count": 64
+      }
+    ],
+    "aesthetic_counts": [
+      {
+        "aesthetic": "照明与色调",
+        "count": 1709
+      },
+      {
+        "aesthetic": "交互功能",
+        "count": 648
+      },
+      {
+        "aesthetic": "风格设计",
+        "count": 513
+      },
+      {
+        "aesthetic": "形体造型",
+        "count": 498
+      },
+      {
+        "aesthetic": "视觉舒适",
+        "count": 444
+      },
+      {
+        "aesthetic": "做工细节",
+        "count": 309
+      },
+      {
+        "aesthetic": "材料质感",
+        "count": 242
+      },
+      {
+        "aesthetic": "空间氛围",
+        "count": 196
+      },
+      {
+        "aesthetic": "色彩",
+        "count": 188
+      }
+    ],
+    "perception_counts": [
+      {
+        "perception": "美观与价值感",
+        "count": 1712
+      },
+      {
+        "perception": "舒适感",
+        "count": 1684
+      },
+      {
+        "perception": "便捷性",
+        "count": 686
+      },
+      {
+        "perception": "愉悦与氛围感",
+        "count": 403
+      },
+      {
+        "perception": "安全感",
+        "count": 109
+      },
+      {
+        "perception": "无",
+        "count": 78
+      },
+      {
+        "perception": "专注",
+        "count": 75
+      }
+    ],
+    "sentiment_counts": [
+      {
+        "sentiment": "中性",
+        "count": 2284
+      },
+      {
+        "sentiment": "正向",
+        "count": 2243
+      },
+      {
+        "sentiment": "负向",
+        "count": 220
+      }
+    ]
+  },
+  "input_validation": {
+    "missing_by_field": {
+      "full_text": 0,
+      "scene": 0,
+      "aesthetic": 0,
+      "perception": 0,
+      "sentiment": 0
+    },
+    "invalid_sentiment_rows": []
+  },
+  "reference_audit": {
+    "reference_path": "D:\\_0000上海交通大学\\prp\\smart-lighting-research\\analysis\\kano-pair-statistics.xlsx",
+    "record_count": {
+      "computed": 4747,
+      "reference": 4747,
+      "match": true
+    },
+    "global_differences": {
+      "scene_counts": [],
+      "aesthetic_counts": [],
+      "perception_counts": [],
+      "sentiment_counts": []
+    },
+    "scene_aesthetic_differences": [],
+    "checks": {
+      "global_counts_match": true,
+      "scene_aesthetic_counts_match": true
+    },
+    "legacy_classification_counts": {
+      "期望型（O）": 13,
+      "魅力型（A）": 23,
+      "样本不足（待验证）": 12,
+      "无差异型（I）": 4
+    },
+    "classification_rule_status": "Legacy classifications are static cell values; executable thresholds were not found in the workbook."
+  }
+}

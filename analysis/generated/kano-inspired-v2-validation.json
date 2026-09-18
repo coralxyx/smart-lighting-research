@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "errors": [],
+  "summary_group_count": 52,
+  "pair_group_count": 202,
+  "scene_post_vote_count": 1649,
+  "class_counts": {
+    "基础型/风险项（M-inspired）": 2,
+    "期望型（O-inspired）": 4,
+    "魅力型（A-inspired）": 13,
+    "样本不足": 14,
+    "无差异型（I-inspired）": 16,
+    "混合/待复核": 3
+  },
+  "legacy_change_count": 33,
+  "low_stability_count": 17
+}

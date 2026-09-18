@@ -1,0 +1,50 @@
+{
+  "method_name": "UGC-sentiment Kano-inspired priority analysis",
+  "method_version": "2.0.0",
+  "analysis_unit": "post",
+  "excluded_scene": "无",
+  "minimum_post_count": 5,
+  "conflict_resolution": "majority_then_negative_positive_neutral",
+  "classification_thresholds": {
+    "must_be_negative_rate": 0.2,
+    "one_dimensional_positive_rate": 0.4,
+    "one_dimensional_negative_rate": 0.1,
+    "attractive_positive_rate": 0.55,
+    "attractive_negative_rate_max_exclusive": 0.1,
+    "indifferent_neutral_rate": 0.5
+  },
+  "bootstrap": {
+    "iterations": 1000,
+    "confidence_level": 0.95,
+    "random_seed": 42,
+    "low_stability_threshold": 0.7,
+    "wide_interval_threshold": 0.3
+  },
+  "class_priority": {
+    "基础型/风险项（M-inspired）": 1,
+    "期望型（O-inspired）": 2,
+    "魅力型（A-inspired）": 3,
+    "无差异型（I-inspired）": 4,
+    "混合/待复核": 5,
+    "样本不足": 6
+  },
+  "class_action": {
+    "基础型/风险项（M-inspired）": "优先修复负向体验",
+    "期望型（O-inspired）": "持续优化并控制失败风险",
+    "魅力型（A-inspired）": "作为差异化卖点强化",
+    "无差异型（I-inspired）": "保持基本水平并低优先级观察",
+    "混合/待复核": "复核样本或细分用户群体",
+    "样本不足": "补充样本后再分类"
+  },
+  "touchpoint_mapping": {
+    "照明与色调": "视觉触点",
+    "视觉舒适": "视觉触点",
+    "形体造型": "视觉触点",
+    "空间氛围": "视觉触点",
+    "风格设计": "视觉触点",
+    "色彩": "视觉触点",
+    "材料质感": "触觉/近身质感触点",
+    "做工细节": "触觉/近身质感触点",
+    "交互功能": "操作交互触点"
+  }
+}
