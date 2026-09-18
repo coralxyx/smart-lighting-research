@@ -1,11 +1,15 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "project": "smart-home-lighting-fp-mapping",
-  "generated_from_repository_state": "2026-09-16",
+  "generated_from_repository_state": "2026-09-18",
   "conventions": {
     "missing_value": "空值表示缺失；字符串‘无’是有效业务分类",
     "percentage_storage": "0-1 numeric",
     "recommended_primary_keys": ["post_id", "segment_id", "tag_id"],
+    "analysis_modes": {
+      "legacy_record": "记录级现有成果，用于默认项目展示与设计转译",
+      "v2_post": "帖子级 Kano-inspired 稳健性分析，用于方法升级和不确定性检查"
+    },
     "current_join_warning": "当前文件未贯穿稳定主键，跨阶段只能基于规范化原文和行序辅助连接，必须检查重复值"
   },
   "modules": [
@@ -52,18 +56,25 @@
       "id": "M04",
       "name": "Kano与词对聚合",
       "input": ["data/processed/tagged-results-with-sentiment.xlsx"],
-      "output": ["analysis/kano-pair-statistics.xlsx"],
+      "output": [
+        "analysis/kano-pair-statistics.xlsx",
+        "outputs/kano_v2/kano-inspired-v2.xlsx"
+      ],
       "grain": [
         "scenario x indicator",
         "scenario x indicator x perception",
-        "global category distribution"
-      ]
+        "global category distribution",
+        "post-level bootstrap stability"
+      ],
+      "default_analysis_mode": "legacy_record",
+      "robustness_analysis_mode": "v2_post"
     },
     {
       "id": "M05",
       "name": "设计方案转译",
       "input": [
         "analysis/kano-pair-statistics.xlsx",
+        "outputs/kano_v2/kano-inspired-v2.xlsx",
         "docs/smart-home-fp-mapping-project-plan.docx"
       ],
       "output": ["deliverables/assets/manifest.json"],
@@ -74,6 +85,7 @@
       "name": "汇报输出",
       "input": [
         "analysis/kano-pair-statistics.xlsx",
+        "outputs/kano_v2/kano-inspired-v2.xlsx",
         "deliverables/assets/manifest.json"
       ],
       "output": ["deliverables/natural-progressive-soft-light-system.pptx"],
@@ -140,6 +152,9 @@
     },
     {
       "path": "analysis/kano-pair-statistics.xlsx",
+      "role": "legacy_record",
+      "analysis_unit": "tagged extraction record",
+      "default_for_project_display": true,
       "canonical_sheets": {
         "Kano汇总": {
           "grain": "scenario x indicator",
@@ -189,6 +204,43 @@
           }
         }
       }
+    },
+    {
+      "path": "outputs/kano_v2/kano-inspired-v2.xlsx",
+      "role": "v2_post",
+      "analysis_unit": "one post vote per scenario x indicator or scenario x indicator x perception",
+      "method_name": "基于UGC情感分布的Kano-inspired需求优先级分析",
+      "replaces_legacy": false,
+      "metrics": {
+        "原始标签记录": 4747,
+        "全部唯一帖子": 425,
+        "正式场景唯一帖子": 383,
+        "场景指标帖子票": 1649,
+        "场景指标组合": 52,
+        "帖子级词对组合": 202,
+        "bootstrap_iterations": 1000,
+        "confidence_level": 0.95
+      },
+      "canonical_sheets": {
+        "场景汇总_帖子级": {
+          "grain": "scenario x indicator post vote",
+          "key_fields": ["使用场景", "美学指标"],
+          "measures": ["原始记录", "帖子数", "正向票", "中性票", "负向票", "分类稳定率"],
+          "class_fields": ["v2分类", "Legacy分类", "分类变化", "质量标记"]
+        },
+        "词对明细_帖子级": {
+          "grain": "scenario x indicator x perception post vote"
+        },
+        "Bootstrap稳定性": {
+          "grain": "scenario x indicator bootstrap result"
+        },
+        "Legacy对照": {
+          "grain": "scenario x indicator comparison"
+        },
+        "帖子级投票": {
+          "grain": "auditable post vote"
+        }
+      }
     }
   ],
   "recommended_visualizations": [
@@ -226,6 +278,22 @@
       "dimensions": ["标准美学指标", "Kano分类"],
       "measures": ["正向率", "负向率", "提及频次"],
       "chart": "bubble_scatter"
+    },
+    {
+      "name": "Legacy与v2分类对照",
+      "source": "outputs/kano_v2/kano-inspired-v2.xlsx#Legacy对照",
+      "dimensions": ["使用场景", "美学指标", "Legacy分类", "v2分类"],
+      "measures": ["原始记录", "帖子数", "分类变化"],
+      "chart": "comparison_table",
+      "analysis_mode": "v2_post"
+    },
+    {
+      "name": "v2分类稳定性",
+      "source": "outputs/kano_v2/kano-inspired-v2.xlsx#Bootstrap稳定性",
+      "dimensions": ["使用场景", "美学指标", "v2分类"],
+      "measures": ["分类稳定率", "正向CI下限", "正向CI上限", "负向CI下限", "负向CI上限"],
+      "chart": "interval_dot_plot",
+      "analysis_mode": "v2_post"
     }
   ]
 }
