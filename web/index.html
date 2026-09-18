@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang='zh-CN'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <meta name='description' content='智能灯光美学研究可视化与设计实验工具'>
+  <title>智能灯光美学研究台</title>
+  <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+  <header class='topbar'>
+    <a class='brand' href='#overview' aria-label='返回研究总览'>
+      <span class='brand-mark'>L</span>
+      <span><strong>LIGHTING LAB</strong><small>智能灯光美学研究台</small></span>
+    </a>
+    <nav aria-label='主导航'>
+      <button class='nav-button active' data-target='overview'>研究总览</button>
+      <button class='nav-button' data-target='comparison'>稳健性对照</button>
+      <button class='nav-button' data-target='vision'>视觉基线</button>
+      <button class='nav-button' data-target='generation'>灯光方案</button>
+    </nav>
+    <div class='status'><span></span>可复现数据</div>
+  </header>
+
+  <main>
+    <section id='overview' class='page-section active'>
+      <div class='hero'>
+        <div>
+          <p class='eyebrow'>UGC × KANO-INSPIRED × VISION</p>
+          <h1>从用户语言到<br><em>灯光设计证据</em></h1>
+          <p class='lede'>保留现有记录级成果，并以帖子级稳健性分析校验结论。所有图表直接读取已验证输出，不在浏览器中重算研究数据。</p>
+        </div>
+        <div class='hero-note'>
+          <span>方法边界</span>
+          <strong>Kano-inspired</strong>
+          <p>基于 UGC 情感分布的需求优先级启发式分析，不等同于经典 Kano 正反问卷。</p>
+        </div>
+      </div>
+      <div id='kpi-grid' class='kpi-grid'></div>
+      <div class='toolbar'>
+        <label>使用场景<select id='scene-select'></select></label>
+        <div class='segmented' aria-label='分析口径'>
+          <button id='mode-legacy' class='active'>Legacy 记录级</button>
+          <button id='mode-v2'>v2 帖子级</button>
+        </div>
+      </div>
+      <div class='dashboard-grid'>
+        <article class='panel span-7'>
+          <div class='panel-heading'><div><span>01</span><h2>场景触点优先级</h2></div><p>按当前口径的样本量排序</p></div>
+          <div id='priority-bars' class='bar-chart'></div>
+        </article>
+        <article class='panel span-5'>
+          <div class='panel-heading'><div><span>02</span><h2>情感结构</h2></div><p>正向 / 中性 / 负向</p></div>
+          <div id='sentiment-bars' class='sentiment-list'></div>
+        </article>
+        <article class='panel span-12'>
+          <div class='panel-heading'><div><span>03</span><h2>触点明细</h2></div><p id='table-note'></p></div>
+          <div class='table-wrap'><table><thead id='touchpoint-head'></thead><tbody id='touchpoint-body'></tbody></table></div>
+        </article>
+      </div>
+    </section>
+
+    <section id='comparison' class='page-section'>
+      <div class='section-intro'><p class='eyebrow'>ROBUSTNESS AUDIT</p><h1>哪些结论在换权重后改变？</h1><p>Legacy 以抽取记录为单位，v2 先在帖子内去重与冲突投票。变化本身不是错误，而是提醒我们避免让长帖子获得过高权重。</p></div>
+      <div id='comparison-kpis' class='kpi-grid compact'></div>
+      <div class='dashboard-grid'>
+        <article class='panel span-7'>
+          <div class='panel-heading'><div><span>04</span><h2>分类变化清单</h2></div><p>仅显示发生变化的组合</p></div>
+          <div class='table-wrap tall'><table><thead><tr><th>场景</th><th>指标</th><th>Legacy</th><th>v2</th><th>稳定率</th></tr></thead><tbody id='comparison-body'></tbody></table></div>
+        </article>
+        <article class='panel span-5'>
+          <div class='panel-heading'><div><span>05</span><h2>低稳定组合</h2></div><p>Bootstrap 分类稳定率</p></div>
+          <div id='stability-list' class='stability-list'></div>
+        </article>
+      </div>
+    </section>
+
+    <section id='vision' class='page-section'>
+      <div class='section-intro'><p class='eyebrow'>VISUAL BASELINES</p><h1>图像侧的三条证据链</h1><p>YOLO 描述室内物体，像素统计描述光照，OpenCLIP 描述零样本美学属性。三者都是 baseline，各自有明确适用边界。</p></div>
+      <div id='vision-kpis' class='kpi-grid'></div>
+      <div class='visual-grid'>
+        <article class='visual-card'><div><span>YOLO 11n</span><h2>室内物体检测</h2><p>COCO 预训练类别，不包含吊灯、灯带等灯具细分类。</p></div><img src='../analysis/yolo-baseline/overview.jpg' alt='YOLO 检测结果总览' loading='lazy'></article>
+        <article class='visual-card'><div><span>INTERPRETABLE</span><h2>亮度热力图</h2><p>亮暗比例、局部对比度、空间层次与暖色代理指标。</p></div><img src='../analysis/lighting-baseline/overview.jpg' alt='光照分析热力图总览' loading='lazy'></article>
+        <article class='visual-card'><div><span>OPENCLIP</span><h2>零样本美学属性</h2><p>属性分数是提示词间的相似度，不是人工标签真值。</p></div><img src='../analysis/openclip-baseline/overview.jpg' alt='OpenCLIP 属性识别总览' loading='lazy'></article>
+      </div>
+    </section>
+
+    <section id='generation' class='page-section'>
+      <div class='section-intro'><p class='eyebrow'>CONTROLLED GENERATION</p><h1>真实底图上的单变量灯光实验</h1><p>三组原图 / A / B 对照：只调整色温、光线分布或任务区聚焦，并用光照指标与 OpenCLIP 回验。</p></div>
+      <figure class='experiment-overview'><img src='../analysis/controlled-generation/overview.jpg' alt='三组受控灯光生成实验总览'><figcaption>左列为原始底图，中列为 A 条件，右列为 B 条件。</figcaption></figure>
+      <div id='experiment-grid' class='experiment-grid'></div>
+      <aside class='boundary'><strong>结论边界</strong><p>这是设计方案生成，不是物理照明仿真。目标色温不是仪器实测值，局部几何与材质仍可能漂移。</p></aside>
+    </section>
+  </main>
+
+  <footer><span>Smart Lighting Research · LZX Upgrade</span><span id='data-version'>数据加载中</span></footer>
+  <div id='error-banner' role='alert' hidden></div>
+  <script src='app.js'></script>
+</body>
+</html>

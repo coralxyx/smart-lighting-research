@@ -8,6 +8,7 @@
 - 分析结果：按日常基础照明、睡眠与起居、学习工作、智能托管、休闲娱乐和亲子互动陪伴等场景进行 Kano 触点分析。
 - 设计方案：以“自然渐进式柔光系统”为主题，将舒适基础光、睡前暖光和夜起路径光组织为连续体验。
 - 方法资料：项目推进方案、智能照明抽取提示词和美学指标体系。
+- 交互工具：可切换 Legacy / v2 口径，并展示视觉 baseline 与受控生图实验的静态 Web 仪表盘。
 
 最终汇报见 [`deliverables/natural-progressive-soft-light-system.pptx`](deliverables/natural-progressive-soft-light-system.pptx)，核心统计见 [`analysis/kano-pair-statistics.xlsx`](analysis/kano-pair-statistics.xlsx)。
 
@@ -37,6 +38,7 @@
 ├─ experiments/
 │  └─ sev-appearance/        # 早期智能汽车外观迁移实验（与主流程隔离）
 ├─ src/                      # 抽取结果整理脚本
+├─ web/                      # 只读研究仪表盘
 ├─ requirements.txt
 └─ README.md
 ```
@@ -61,6 +63,14 @@ python src/format_extraction_results.py
 如果出现 `ModuleNotFoundError`，请确认已经在当前虚拟环境中执行过依赖安装命令。
 
 该脚本将 JSONL 三元组展开为结构化表格，便于抽查原始抽取结果。正式统计和可视化使用 `data/processed/tagged-results-with-sentiment.xlsx`。
+
+启动 Web 研究仪表盘：
+
+```bash
+python -m http.server 8000
+```
+
+浏览器访问 `http://localhost:8000/web/`。详细说明见 [`web/README.md`](web/README.md)。
 
 ## 文档索引
 
