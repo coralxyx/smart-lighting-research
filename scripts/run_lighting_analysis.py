@@ -89,10 +89,14 @@ def analyze_image(path: Path, input_dir: Path, config: dict[str, Any]) -> tuple[
     ys, xs = np.where(highlight_mask)
     highlight_center = [round(float(xs.mean() / width), 6), round(float(ys.mean() / height), 6)] if len(xs) else None
     relative = path.relative_to(input_dir)
+    try:
+        source_path = path.relative_to(PROJECT_ROOT).as_posix()
+    except ValueError:
+        source_path = path.resolve().as_posix()
     metrics = {
         'image_id': relative.as_posix(),
         'room': relative.parts[0],
-        'source_path': (Path('data') / 'raw' / 'base_images' / relative).as_posix(),
+        'source_path': source_path,
         'width': width,
         'height': height,
         'mean_luminance': round(float(gray.mean()), 6),

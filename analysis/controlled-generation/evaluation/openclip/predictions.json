@@ -1,0 +1,290 @@
+[
+  {
+    "image_id": "color-temperature/cool-5000k.png",
+    "room": "color-temperature",
+    "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/color-temperature/cool-5000k.png",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.555138,
+        "scores": {
+          "暖色照明": 0.302478,
+          "中性色照明": 0.555138,
+          "冷色照明": 0.142384
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.722714,
+        "scores": {
+          "柔和漫射": 0.722714,
+          "硬朗定向": 0.277286
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.664999,
+        "scores": {
+          "间接照明": 0.664999,
+          "直接照明": 0.335001
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.581958,
+        "scores": {
+          "层次丰富": 0.418042,
+          "均匀平坦": 0.581958
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.999882,
+        "scores": {
+          "明亮通透": 0.999882,
+          "昏暗氛围": 0.000118
+        }
+      }
+    }
+  },
+  {
+    "image_id": "color-temperature/warm-2700k.png",
+    "room": "color-temperature",
+    "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/color-temperature/warm-2700k.png",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.867587,
+        "scores": {
+          "暖色照明": 0.867587,
+          "中性色照明": 0.108001,
+          "冷色照明": 0.024412
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.657949,
+        "scores": {
+          "柔和漫射": 0.657949,
+          "硬朗定向": 0.342051
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.878772,
+        "scores": {
+          "间接照明": 0.878772,
+          "直接照明": 0.121228
+        }
+      },
+      "光照层次": {
+        "label": "层次丰富",
+        "confidence": 0.643439,
+        "scores": {
+          "层次丰富": 0.643439,
+          "均匀平坦": 0.356561
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.999012,
+        "scores": {
+          "明亮通透": 0.999012,
+          "昏暗氛围": 0.000988
+        }
+      }
+    }
+  },
+  {
+    "image_id": "light-distribution/hard-directional.png",
+    "room": "light-distribution",
+    "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/light-distribution/hard-directional.png",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.930944,
+        "scores": {
+          "暖色照明": 0.930944,
+          "中性色照明": 0.069048,
+          "冷色照明": 9e-06
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.987612,
+        "scores": {
+          "柔和漫射": 0.987612,
+          "硬朗定向": 0.012388
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.793447,
+        "scores": {
+          "间接照明": 0.793447,
+          "直接照明": 0.206552
+        }
+      },
+      "光照层次": {
+        "label": "层次丰富",
+        "confidence": 0.638647,
+        "scores": {
+          "层次丰富": 0.638647,
+          "均匀平坦": 0.361353
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.985475,
+        "scores": {
+          "明亮通透": 0.985475,
+          "昏暗氛围": 0.014525
+        }
+      }
+    }
+  },
+  {
+    "image_id": "light-distribution/soft-diffuse.png",
+    "room": "light-distribution",
+    "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/light-distribution/soft-diffuse.png",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.766584,
+        "scores": {
+          "暖色照明": 0.766584,
+          "中性色照明": 0.233355,
+          "冷色照明": 6.2e-05
+        }
+      },
+      "光线柔和度": {
+        "label": "柔和漫射",
+        "confidence": 0.980366,
+        "scores": {
+          "柔和漫射": 0.980366,
+          "硬朗定向": 0.019634
+        }
+      },
+      "照明方式": {
+        "label": "间接照明",
+        "confidence": 0.644288,
+        "scores": {
+          "间接照明": 0.644288,
+          "直接照明": 0.355712
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.73,
+        "scores": {
+          "层次丰富": 0.27,
+          "均匀平坦": 0.73
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.926375,
+        "scores": {
+          "明亮通透": 0.926375,
+          "昏暗氛围": 0.073625
+        }
+      }
+    }
+  },
+  {
+    "image_id": "task-focus/focused-task.png",
+    "room": "task-focus",
+    "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/task-focus/focused-task.png",
+    "attributes": {
+      "色温感知": {
+        "label": "暖色照明",
+        "confidence": 0.600106,
+        "scores": {
+          "暖色照明": 0.600106,
+          "中性色照明": 0.394177,
+          "冷色照明": 0.005717
+        }
+      },
+      "光线柔和度": {
+        "label": "硬朗定向",
+        "confidence": 0.655615,
+        "scores": {
+          "柔和漫射": 0.344385,
+          "硬朗定向": 0.655615
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.637107,
+        "scores": {
+          "间接照明": 0.362893,
+          "直接照明": 0.637107
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.907259,
+        "scores": {
+          "层次丰富": 0.092741,
+          "均匀平坦": 0.907259
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.957186,
+        "scores": {
+          "明亮通透": 0.957186,
+          "昏暗氛围": 0.042814
+        }
+      }
+    }
+  },
+  {
+    "image_id": "task-focus/uniform-ambient.png",
+    "room": "task-focus",
+    "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/task-focus/uniform-ambient.png",
+    "attributes": {
+      "色温感知": {
+        "label": "中性色照明",
+        "confidence": 0.859001,
+        "scores": {
+          "暖色照明": 0.139021,
+          "中性色照明": 0.859001,
+          "冷色照明": 0.001978
+        }
+      },
+      "光线柔和度": {
+        "label": "硬朗定向",
+        "confidence": 0.509587,
+        "scores": {
+          "柔和漫射": 0.490413,
+          "硬朗定向": 0.509587
+        }
+      },
+      "照明方式": {
+        "label": "直接照明",
+        "confidence": 0.838504,
+        "scores": {
+          "间接照明": 0.161496,
+          "直接照明": 0.838504
+        }
+      },
+      "光照层次": {
+        "label": "均匀平坦",
+        "confidence": 0.927218,
+        "scores": {
+          "层次丰富": 0.072782,
+          "均匀平坦": 0.927218
+        }
+      },
+      "明暗氛围": {
+        "label": "明亮通透",
+        "confidence": 0.999263,
+        "scores": {
+          "明亮通透": 0.999263,
+          "昏暗氛围": 0.000737
+        }
+      }
+    }
+  }
+]

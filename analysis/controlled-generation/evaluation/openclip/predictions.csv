@@ -1,0 +1,7 @@
+﻿image_id,room,色温感知_标签,色温感知_置信度,光线柔和度_标签,光线柔和度_置信度,照明方式_标签,照明方式_置信度,光照层次_标签,光照层次_置信度,明暗氛围_标签,明暗氛围_置信度
+color-temperature/cool-5000k.png,color-temperature,中性色照明,0.555138,柔和漫射,0.722714,间接照明,0.664999,均匀平坦,0.581958,明亮通透,0.999882
+color-temperature/warm-2700k.png,color-temperature,暖色照明,0.867587,柔和漫射,0.657949,间接照明,0.878772,层次丰富,0.643439,明亮通透,0.999012
+light-distribution/hard-directional.png,light-distribution,暖色照明,0.930944,柔和漫射,0.987612,间接照明,0.793447,层次丰富,0.638647,明亮通透,0.985475
+light-distribution/soft-diffuse.png,light-distribution,暖色照明,0.766584,柔和漫射,0.980366,间接照明,0.644288,均匀平坦,0.73,明亮通透,0.926375
+task-focus/focused-task.png,task-focus,暖色照明,0.600106,硬朗定向,0.655615,直接照明,0.637107,均匀平坦,0.907259,明亮通透,0.957186
+task-focus/uniform-ambient.png,task-focus,中性色照明,0.859001,硬朗定向,0.509587,直接照明,0.838504,均匀平坦,0.927218,明亮通透,0.999263

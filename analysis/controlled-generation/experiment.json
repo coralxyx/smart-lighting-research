@@ -1,0 +1,632 @@
+{
+  "method": "built-in image generation edit mode",
+  "design": "three paired single-variable A/B experiments",
+  "image_count": 6,
+  "experiments": [
+    {
+      "id": "color-temperature",
+      "title": "客厅：色温单变量",
+      "source": "data/raw/base_images/living_room/living_02_pexels_10161225.jpg",
+      "controlled_variable": "artificial-light color temperature",
+      "constants": [
+        "camera",
+        "geometry",
+        "furniture",
+        "object count",
+        "target exposure"
+      ],
+      "variants": [
+        {
+          "id": "warm-2700k",
+          "label": "A 暖色 2700K",
+          "target": "warm 2700 K",
+          "file": "images/color-temperature/warm-2700k.png",
+          "lighting_metrics": {
+            "image_id": "color-temperature/warm-2700k.png",
+            "room": "color-temperature",
+            "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/color-temperature/warm-2700k.png",
+            "width": 1529,
+            "height": 1029,
+            "mean_luminance": 0.490699,
+            "luminance_std": 0.194283,
+            "luminance_p05": 0.121569,
+            "luminance_p95": 0.807843,
+            "dynamic_range_p95_p05": 0.686275,
+            "dark_area_ratio": 0.093998,
+            "bright_area_ratio": 0.058803,
+            "highlight_area_ratio": 0.004906,
+            "local_contrast_mean": 0.084589,
+            "spatial_layering_std": 0.089792,
+            "luminance_entropy": 0.946403,
+            "warm_pixel_ratio": 0.881121,
+            "warmth_index": 0.248749,
+            "bright_region_count": 0,
+            "bright_region_concentration": 0.0,
+            "highlight_center_normalized": [
+              0.327563,
+              0.215949
+            ],
+            "grid_luminance": [
+              0.5822,
+              0.5263,
+              0.469591,
+              0.576993,
+              0.489373,
+              0.354925,
+              0.381172,
+              0.539466,
+              0.46169,
+              0.444555,
+              0.417746,
+              0.384086,
+              0.440611,
+              0.4833,
+              0.591906,
+              0.705623
+            ]
+          },
+          "openclip_attributes": {
+            "色温感知": {
+              "label": "暖色照明",
+              "confidence": 0.867587,
+              "scores": {
+                "暖色照明": 0.867587,
+                "中性色照明": 0.108001,
+                "冷色照明": 0.024412
+              }
+            },
+            "光线柔和度": {
+              "label": "柔和漫射",
+              "confidence": 0.657949,
+              "scores": {
+                "柔和漫射": 0.657949,
+                "硬朗定向": 0.342051
+              }
+            },
+            "照明方式": {
+              "label": "间接照明",
+              "confidence": 0.878772,
+              "scores": {
+                "间接照明": 0.878772,
+                "直接照明": 0.121228
+              }
+            },
+            "光照层次": {
+              "label": "层次丰富",
+              "confidence": 0.643439,
+              "scores": {
+                "层次丰富": 0.643439,
+                "均匀平坦": 0.356561
+              }
+            },
+            "明暗氛围": {
+              "label": "明亮通透",
+              "confidence": 0.999012,
+              "scores": {
+                "明亮通透": 0.999012,
+                "昏暗氛围": 0.000988
+              }
+            }
+          }
+        },
+        {
+          "id": "cool-5000k",
+          "label": "B 冷中性 5000K",
+          "target": "cool-neutral 5000 K",
+          "file": "images/color-temperature/cool-5000k.png",
+          "lighting_metrics": {
+            "image_id": "color-temperature/cool-5000k.png",
+            "room": "color-temperature",
+            "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/color-temperature/cool-5000k.png",
+            "width": 1529,
+            "height": 1029,
+            "mean_luminance": 0.570168,
+            "luminance_std": 0.212927,
+            "luminance_p05": 0.152941,
+            "luminance_p95": 0.898039,
+            "dynamic_range_p95_p05": 0.745098,
+            "dark_area_ratio": 0.070605,
+            "bright_area_ratio": 0.133731,
+            "highlight_area_ratio": 0.062358,
+            "local_contrast_mean": 0.089026,
+            "spatial_layering_std": 0.101478,
+            "luminance_entropy": 0.958998,
+            "warm_pixel_ratio": 0.2616,
+            "warmth_index": 0.047541,
+            "bright_region_count": 3,
+            "bright_region_concentration": 0.494582,
+            "highlight_center_normalized": [
+              0.465245,
+              0.563512
+            ],
+            "grid_luminance": [
+              0.696856,
+              0.621935,
+              0.551521,
+              0.649906,
+              0.622957,
+              0.423766,
+              0.423009,
+              0.621401,
+              0.512974,
+              0.539634,
+              0.496349,
+              0.443606,
+              0.495746,
+              0.557314,
+              0.672907,
+              0.791295
+            ]
+          },
+          "openclip_attributes": {
+            "色温感知": {
+              "label": "中性色照明",
+              "confidence": 0.555138,
+              "scores": {
+                "暖色照明": 0.302478,
+                "中性色照明": 0.555138,
+                "冷色照明": 0.142384
+              }
+            },
+            "光线柔和度": {
+              "label": "柔和漫射",
+              "confidence": 0.722714,
+              "scores": {
+                "柔和漫射": 0.722714,
+                "硬朗定向": 0.277286
+              }
+            },
+            "照明方式": {
+              "label": "间接照明",
+              "confidence": 0.664999,
+              "scores": {
+                "间接照明": 0.664999,
+                "直接照明": 0.335001
+              }
+            },
+            "光照层次": {
+              "label": "均匀平坦",
+              "confidence": 0.581958,
+              "scores": {
+                "层次丰富": 0.418042,
+                "均匀平坦": 0.581958
+              }
+            },
+            "明暗氛围": {
+              "label": "明亮通透",
+              "confidence": 0.999882,
+              "scores": {
+                "明亮通透": 0.999882,
+                "昏暗氛围": 0.000118
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "light-distribution",
+      "title": "卧室：光线分布单变量",
+      "source": "data/raw/base_images/bedroom/bedroom_06_pexels_3933240.jpg",
+      "controlled_variable": "incident-light softness and directionality",
+      "constants": [
+        "camera",
+        "geometry",
+        "objects",
+        "color temperature",
+        "target exposure"
+      ],
+      "variants": [
+        {
+          "id": "soft-diffuse",
+          "label": "A 柔和漫射",
+          "target": "soft diffuse window light",
+          "file": "images/light-distribution/soft-diffuse.png",
+          "lighting_metrics": {
+            "image_id": "light-distribution/soft-diffuse.png",
+            "room": "light-distribution",
+            "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/light-distribution/soft-diffuse.png",
+            "width": 1024,
+            "height": 1536,
+            "mean_luminance": 0.586382,
+            "luminance_std": 0.247436,
+            "luminance_p05": 0.12549,
+            "luminance_p95": 0.905882,
+            "dynamic_range_p95_p05": 0.780392,
+            "dark_area_ratio": 0.084743,
+            "bright_area_ratio": 0.260927,
+            "highlight_area_ratio": 0.079246,
+            "local_contrast_mean": 0.05582,
+            "spatial_layering_std": 0.194665,
+            "luminance_entropy": 0.970006,
+            "warm_pixel_ratio": 0.441941,
+            "warmth_index": 0.095166,
+            "bright_region_count": 5,
+            "bright_region_concentration": 0.405401,
+            "highlight_center_normalized": [
+              0.379061,
+              0.134335
+            ],
+            "grid_luminance": [
+              0.853563,
+              0.863684,
+              0.743265,
+              0.792727,
+              0.755482,
+              0.6163,
+              0.765885,
+              0.567733,
+              0.509612,
+              0.436674,
+              0.544339,
+              0.652357,
+              0.328629,
+              0.270651,
+              0.279688,
+              0.401527
+            ]
+          },
+          "openclip_attributes": {
+            "色温感知": {
+              "label": "暖色照明",
+              "confidence": 0.766584,
+              "scores": {
+                "暖色照明": 0.766584,
+                "中性色照明": 0.233355,
+                "冷色照明": 6.2e-05
+              }
+            },
+            "光线柔和度": {
+              "label": "柔和漫射",
+              "confidence": 0.980366,
+              "scores": {
+                "柔和漫射": 0.980366,
+                "硬朗定向": 0.019634
+              }
+            },
+            "照明方式": {
+              "label": "间接照明",
+              "confidence": 0.644288,
+              "scores": {
+                "间接照明": 0.644288,
+                "直接照明": 0.355712
+              }
+            },
+            "光照层次": {
+              "label": "均匀平坦",
+              "confidence": 0.73,
+              "scores": {
+                "层次丰富": 0.27,
+                "均匀平坦": 0.73
+              }
+            },
+            "明暗氛围": {
+              "label": "明亮通透",
+              "confidence": 0.926375,
+              "scores": {
+                "明亮通透": 0.926375,
+                "昏暗氛围": 0.073625
+              }
+            }
+          }
+        },
+        {
+          "id": "hard-directional",
+          "label": "B 硬朗定向",
+          "target": "hard directional window light",
+          "file": "images/light-distribution/hard-directional.png",
+          "lighting_metrics": {
+            "image_id": "light-distribution/hard-directional.png",
+            "room": "light-distribution",
+            "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/light-distribution/hard-directional.png",
+            "width": 1024,
+            "height": 1536,
+            "mean_luminance": 0.560261,
+            "luminance_std": 0.263687,
+            "luminance_p05": 0.086275,
+            "luminance_p95": 0.968627,
+            "dynamic_range_p95_p05": 0.882353,
+            "dark_area_ratio": 0.11495,
+            "bright_area_ratio": 0.206598,
+            "highlight_area_ratio": 0.145631,
+            "local_contrast_mean": 0.0829,
+            "spatial_layering_std": 0.175694,
+            "luminance_entropy": 0.978701,
+            "warm_pixel_ratio": 0.531041,
+            "warmth_index": 0.117262,
+            "bright_region_count": 12,
+            "bright_region_concentration": 0.236669,
+            "highlight_center_normalized": [
+              0.440556,
+              0.298818
+            ],
+            "grid_luminance": [
+              0.747039,
+              0.756884,
+              0.716836,
+              0.766384,
+              0.787132,
+              0.5597,
+              0.737341,
+              0.583838,
+              0.538235,
+              0.410262,
+              0.502952,
+              0.588236,
+              0.348859,
+              0.344853,
+              0.246813,
+              0.328814
+            ]
+          },
+          "openclip_attributes": {
+            "色温感知": {
+              "label": "暖色照明",
+              "confidence": 0.930944,
+              "scores": {
+                "暖色照明": 0.930944,
+                "中性色照明": 0.069048,
+                "冷色照明": 9e-06
+              }
+            },
+            "光线柔和度": {
+              "label": "柔和漫射",
+              "confidence": 0.987612,
+              "scores": {
+                "柔和漫射": 0.987612,
+                "硬朗定向": 0.012388
+              }
+            },
+            "照明方式": {
+              "label": "间接照明",
+              "confidence": 0.793447,
+              "scores": {
+                "间接照明": 0.793447,
+                "直接照明": 0.206552
+              }
+            },
+            "光照层次": {
+              "label": "层次丰富",
+              "confidence": 0.638647,
+              "scores": {
+                "层次丰富": 0.638647,
+                "均匀平坦": 0.361353
+              }
+            },
+            "明暗氛围": {
+              "label": "明亮通透",
+              "confidence": 0.985475,
+              "scores": {
+                "明亮通透": 0.985475,
+                "昏暗氛围": 0.014525
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "task-focus",
+      "title": "书房：任务区聚焦单变量",
+      "source": "data/raw/base_images/study/study_03_pexels_4307570.jpg",
+      "controlled_variable": "task-zone versus ambient lighting balance",
+      "constants": [
+        "camera",
+        "geometry",
+        "objects",
+        "fixtures",
+        "color temperature"
+      ],
+      "task_roi_normalized": [
+        0.23,
+        0.38,
+        0.49,
+        0.63
+      ],
+      "variants": [
+        {
+          "id": "focused-task",
+          "label": "A 任务区聚焦",
+          "target": "bright desk with restrained ambient",
+          "file": "images/task-focus/focused-task.png",
+          "lighting_metrics": {
+            "image_id": "task-focus/focused-task.png",
+            "room": "task-focus",
+            "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/task-focus/focused-task.png",
+            "width": 1536,
+            "height": 1024,
+            "mean_luminance": 0.409646,
+            "luminance_std": 0.130364,
+            "luminance_p05": 0.215686,
+            "luminance_p95": 0.631373,
+            "dynamic_range_p95_p05": 0.415686,
+            "dark_area_ratio": 0.044938,
+            "bright_area_ratio": 0.00783,
+            "highlight_area_ratio": 0.00332,
+            "local_contrast_mean": 0.041314,
+            "spatial_layering_std": 0.064164,
+            "luminance_entropy": 0.877158,
+            "warm_pixel_ratio": 0.531549,
+            "warmth_index": 0.086026,
+            "bright_region_count": 0,
+            "bright_region_concentration": 0.0,
+            "highlight_center_normalized": [
+              0.437875,
+              0.19817
+            ],
+            "grid_luminance": [
+              0.504746,
+              0.550241,
+              0.462715,
+              0.343756,
+              0.445318,
+              0.39982,
+              0.445625,
+              0.317552,
+              0.397207,
+              0.366814,
+              0.454688,
+              0.327703,
+              0.359097,
+              0.420635,
+              0.421028,
+              0.337386
+            ]
+          },
+          "openclip_attributes": {
+            "色温感知": {
+              "label": "暖色照明",
+              "confidence": 0.600106,
+              "scores": {
+                "暖色照明": 0.600106,
+                "中性色照明": 0.394177,
+                "冷色照明": 0.005717
+              }
+            },
+            "光线柔和度": {
+              "label": "硬朗定向",
+              "confidence": 0.655615,
+              "scores": {
+                "柔和漫射": 0.344385,
+                "硬朗定向": 0.655615
+              }
+            },
+            "照明方式": {
+              "label": "直接照明",
+              "confidence": 0.637107,
+              "scores": {
+                "间接照明": 0.362893,
+                "直接照明": 0.637107
+              }
+            },
+            "光照层次": {
+              "label": "均匀平坦",
+              "confidence": 0.907259,
+              "scores": {
+                "层次丰富": 0.092741,
+                "均匀平坦": 0.907259
+              }
+            },
+            "明暗氛围": {
+              "label": "明亮通透",
+              "confidence": 0.957186,
+              "scores": {
+                "明亮通透": 0.957186,
+                "昏暗氛围": 0.042814
+              }
+            }
+          },
+          "task_roi_metrics": {
+            "task_mean_luminance": 0.334448,
+            "background_mean_luminance": 0.409887,
+            "task_to_background_ratio": 0.815953
+          }
+        },
+        {
+          "id": "uniform-ambient",
+          "label": "B 均匀环境光",
+          "target": "uniform general illumination",
+          "file": "images/task-focus/uniform-ambient.png",
+          "lighting_metrics": {
+            "image_id": "task-focus/uniform-ambient.png",
+            "room": "task-focus",
+            "source_path": "D:/_0000上海交通大学/prp/smart-lighting-research/analysis/controlled-generation/images/task-focus/uniform-ambient.png",
+            "width": 1536,
+            "height": 1024,
+            "mean_luminance": 0.685173,
+            "luminance_std": 0.132395,
+            "luminance_p05": 0.443137,
+            "luminance_p95": 0.815686,
+            "dynamic_range_p95_p05": 0.372549,
+            "dark_area_ratio": 0.022685,
+            "bright_area_ratio": 0.092791,
+            "highlight_area_ratio": 0.017831,
+            "local_contrast_mean": 0.046746,
+            "spatial_layering_std": 0.076359,
+            "luminance_entropy": 0.830135,
+            "warm_pixel_ratio": 0.368586,
+            "warmth_index": 0.060976,
+            "bright_region_count": 2,
+            "bright_region_concentration": 0.757775,
+            "highlight_center_normalized": [
+              0.556031,
+              0.236987
+            ],
+            "grid_luminance": [
+              0.797902,
+              0.764595,
+              0.783514,
+              0.756235,
+              0.710769,
+              0.641784,
+              0.69845,
+              0.634968,
+              0.65028,
+              0.471549,
+              0.677669,
+              0.621744,
+              0.6766,
+              0.714545,
+              0.715864,
+              0.646304
+            ]
+          },
+          "openclip_attributes": {
+            "色温感知": {
+              "label": "中性色照明",
+              "confidence": 0.859001,
+              "scores": {
+                "暖色照明": 0.139021,
+                "中性色照明": 0.859001,
+                "冷色照明": 0.001978
+              }
+            },
+            "光线柔和度": {
+              "label": "硬朗定向",
+              "confidence": 0.509587,
+              "scores": {
+                "柔和漫射": 0.490413,
+                "硬朗定向": 0.509587
+              }
+            },
+            "照明方式": {
+              "label": "直接照明",
+              "confidence": 0.838504,
+              "scores": {
+                "间接照明": 0.161496,
+                "直接照明": 0.838504
+              }
+            },
+            "光照层次": {
+              "label": "均匀平坦",
+              "confidence": 0.927218,
+              "scores": {
+                "层次丰富": 0.072782,
+                "均匀平坦": 0.927218
+              }
+            },
+            "明暗氛围": {
+              "label": "明亮通透",
+              "confidence": 0.999263,
+              "scores": {
+                "明亮通透": 0.999263,
+                "昏暗氛围": 0.000737
+              }
+            }
+          },
+          "task_roi_metrics": {
+            "task_mean_luminance": 0.491994,
+            "background_mean_luminance": 0.6954,
+            "task_to_background_ratio": 0.707497
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Generated edits are visual design proposals rather than photometric simulations.",
+    "Despite invariant prompts, generative editing may slightly change geometry, texture, crop, or small objects.",
+    "Color-temperature values are target descriptions, not spectrometer measurements.",
+    "OpenCLIP results are zero-shot similarities and are not ground-truth aesthetic labels."
+  ]
+}

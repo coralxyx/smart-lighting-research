@@ -91,10 +91,14 @@ def run_predictions(config: dict[str, Any], input_dir: Path) -> list[dict[str, A
         predictions = classify_batch(image_features, text_features)
         for path, prediction in zip(batch_paths, predictions):
             relative = path.relative_to(input_dir)
+            try:
+                source_path = path.relative_to(PROJECT_ROOT).as_posix()
+            except ValueError:
+                source_path = path.resolve().as_posix()
             records.append({
                 'image_id': relative.as_posix(),
                 'room': relative.parts[0],
-                'source_path': (Path('data') / 'raw' / 'base_images' / relative).as_posix(),
+                'source_path': source_path,
                 'attributes': prediction,
             })
     return records
