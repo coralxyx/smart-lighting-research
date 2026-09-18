@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "format": "PNG 16:9, 144 dpi",
+  "charts": [
+    {
+      "path": "01-scene-distribution.png",
+      "title": "六类正式使用场景的用户反馈分布",
+      "analysis_mode": "final_tags"
+    },
+    {
+      "path": "02-scene-indicator-heatmap.png",
+      "title": "不同场景最受关注的美学触点",
+      "analysis_mode": "legacy_record"
+    },
+    {
+      "path": "03-scene-sentiment-structure.png",
+      "title": "六类正式场景的情感结构",
+      "analysis_mode": "final_tags"
+    },
+    {
+      "path": "04-legacy-v2-transition.png",
+      "title": "统计口径变化会改变部分Kano类型",
+      "analysis_mode": "comparison"
+    },
+    {
+      "path": "05-v2-priority-bubble.png",
+      "title": "帖子级Kano-inspired需求优先级分布",
+      "analysis_mode": "v2_post"
+    },
+    {
+      "path": "06-v2-bootstrap-stability.png",
+      "title": "Bootstrap揭示分类的不确定性",
+      "analysis_mode": "v2_post"
+    }
+  ]
+}

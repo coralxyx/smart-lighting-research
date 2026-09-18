@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_modes": {
+    "legacy_record": "记录级现有成果，默认项目展示",
+    "v2_post": "帖子级Kano-inspired稳健性分析"
+  },
+  "dimensions": {
+    "scenes": [
+      "日常基础照明",
+      "睡眠与起居",
+      "学习工作",
+      "智能托管",
+      "休闲娱乐",
+      "亲子互动陪伴"
+    ],
+    "indicators": [
+      "照明与色调",
+      "交互功能",
+      "风格设计",
+      "形体造型",
+      "视觉舒适",
+      "做工细节",
+      "材料质感",
+      "空间氛围",
+      "色彩"
+    ],
+    "sentiments": [
+      "正向",
+      "中性",
+      "负向"
+    ],
+    "v2_classes": [
+      "基础型/风险项（M-inspired）",
+      "期望型（O-inspired）",
+      "魅力型（A-inspired）",
+      "无差异型（I-inspired）",
+      "混合/待复核",
+      "样本不足"
+    ]
+  },
+  "metrics": {
+    "tagged_records": 4747,
+    "formal_scene_records": 2396,
+    "excluded_no_scene_records": 2351,
+    "unique_posts": 425,
+    "formal_unique_posts": 383,
+    "legacy_combinations": 52,
+    "v2_combinations": 52,
+    "v2_post_votes": 1649,
+    "changed_classifications": 33,
+    "low_stability_combinations": 17
+  }
+}

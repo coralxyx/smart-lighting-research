@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "default_analysis_mode": "legacy_record",
+  "robustness_analysis_mode": "v2_post",
+  "files": [
+    {
+      "path": "metadata.json",
+      "grain": "project metadata and dimensions"
+    },
+    {
+      "path": "legacy-summary.json",
+      "grain": "scenario x indicator record aggregate"
+    },
+    {
+      "path": "legacy-pairs.json",
+      "grain": "scenario x indicator x perception record aggregate"
+    },
+    {
+      "path": "v2-summary.json",
+      "grain": "scenario x indicator post aggregate"
+    },
+    {
+      "path": "v2-pairs.json",
+      "grain": "scenario x indicator x perception post aggregate"
+    },
+    {
+      "path": "v2-stability.json",
+      "grain": "scenario x indicator bootstrap result"
+    },
+    {
+      "path": "legacy-v2-comparison.json",
+      "grain": "scenario x indicator comparison"
+    },
+    {
+      "path": "post-votes.json",
+      "grain": "auditable post vote"
+    },
+    {
+      "path": "dashboard-data.json",
+      "grain": "compact combined dashboard payload"
+    }
+  ],
+  "metrics": {
+    "tagged_records": 4747,
+    "formal_scene_records": 2396,
+    "excluded_no_scene_records": 2351,
+    "unique_posts": 425,
+    "formal_unique_posts": 383,
+    "legacy_combinations": 52,
+    "v2_combinations": 52,
+    "v2_post_votes": 1649,
+    "changed_classifications": 33,
+    "low_stability_combinations": 17
+  }
+}

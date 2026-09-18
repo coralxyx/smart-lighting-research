@@ -199,9 +199,11 @@ Web 是展示和交互层，在数据、统计方法及视觉模块稳定后实�
 - [x] 完成逐项差异核对
 - [x] 实现 Kano-inspired v2
 - [x] 将 Legacy 与 v2 纳入可视化数据契约
-- [ ] 输出答辩图表和 Web 数据
+- [x] 输出答辩图表和 Web 数据
 - [ ] 完成 YOLO 家具/灯具检测 baseline
 - [ ] 完成光照区域分割 baseline
 - [ ] 完成 OpenCLIP 美学属性识别 baseline
 - [ ] 视时间开展文本语义聚类实验
 - [ ] 完成生图与 Web
+- [ ] 完成单流程后开展单 Agent / 多 Agent 对比实验
+- [ ] 整理答辩材料并创建 PR
